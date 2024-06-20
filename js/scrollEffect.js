@@ -1,0 +1,1 @@
+document.querySelector('.landing-scroll').addEventListener('click', () => window.scrollBy(0, 600))
