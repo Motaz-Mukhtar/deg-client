@@ -83,9 +83,17 @@ header nav ul {
     display: flex;
 }
 
+header nav .menu-bar {
+    display: none;
+}
+
 header nav ul li {
     font-weight: bold;
     cursor: pointer;
+}
+
+header nav ul li:first-child {
+    display: none;
 }
 
 header nav ul li a {
@@ -98,6 +106,40 @@ header nav ul li:hover a {
 
 header nav ul li:not(:first-child) {
     margin-left: 60px;
+}
+
+@media (max-width: 900px) {
+    header nav ul {
+        display: block;
+        position: fixed;
+        right: -500px;
+        top: 0px;
+        height: 100%;
+        background-color: var(--background-color);
+        z-index: 10;
+        padding: 50px 10px;
+    }
+
+    header nav ul li:not(:first-child) {
+        margin-left: 0px;
+    }
+
+    header nav ul li {
+        margin-bottom: 30px;
+        padding-right: 250px;
+    }
+
+    header nav ul li:first-child {
+        display: block;
+        position: relative;
+        right: -300px;
+    }
+
+    header nav .menu-bar {
+        display: block;
+        font-size: 40px;
+        cursor: pointer;
+   }
 }
 /* End Header */
 /* Start Landing Section */
