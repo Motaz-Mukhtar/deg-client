@@ -557,7 +557,7 @@ header nav ul li:not(:first-child) {
 .projects-section .projects-container figure:nth-child(2):before {
     content: '';
     filter: brightness(0.5);
-    background-image: url(../assets/projects-images/_X4A3791.JPG);
+    background-image: url(../assets/projects-images/one-image.JPG);
 }
 
 .projects-section .projects-container figure:nth-child(3):before {
