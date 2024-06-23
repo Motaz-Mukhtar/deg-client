@@ -1,3 +1,4 @@
-body {
-    background-color: var(--background-color);
+
+.landing-container {
+    margin: 100px auto;
 }

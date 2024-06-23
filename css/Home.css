@@ -54,6 +54,12 @@ header nav ul li > a.select {
     color: var(--text-color) !important;
 }
 
+.up {
+    transform: translateY(100px);
+    -webkit-transform: translateY(100px);
+    opacity: 0;
+}
+
 /* End Global Rules*/
 
 /* Start Header */
@@ -68,9 +74,9 @@ header nav ul li > a.select {
     top: 0px;
     width: 100%;
     height: 100%;
-    filter: brightness(0.3);
+    filter: brightness(0.2);
     z-index: -1;
-    background-image: url(../assets/Architecture\ \ \ Nature\ -\ Imgur.jpg);
+    background-image: url(../assets/landing-background-image.jpg);
     background-size: cover;
 }
 
@@ -352,7 +358,13 @@ header nav ul li:not(:first-child) {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 770px) {
+    .landing-container {
+        margin: 120px 0px;
+    }
+}
+
+@media (max-width: 700px) {
     .strategic-section .article-container {
         margin: 0px;
     }
@@ -383,6 +395,7 @@ header nav ul li:not(:first-child) {
     text-align: center;
     background-color: var(--background-color);
     padding: 80px 0px;
+    padding-bottom: 10px;
     color: var(--text-color);
 }
 
@@ -395,16 +408,18 @@ header nav ul li:not(:first-child) {
     display: grid;
     grid-template-columns: repeat(3, minmax(300px, 1fr));
     gap: 50px;
-    margin-bottom: 150px;
+    margin-bottom: 100px;
 }
 
 .services-section ul li {
     position: relative;
     background-color: var(--background-color);
     /* border: 2px solid var(--main-color); */
-    padding: 100px 0px;
+    padding: 180px 0px;
     cursor: pointer;
     perspective: 1000px;
+    width: 100%;
+    height: 100%;
 }
 
 .services-section ul li .text-card {
@@ -423,7 +438,7 @@ header nav ul li:not(:first-child) {
 .services-section ul li .text-face-back {
     position: absolute;
     width: 100%;
-    height: 180%;
+    height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
@@ -459,19 +474,30 @@ header nav ul li:not(:first-child) {
     width: 400px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
+    .services-section ul li p {
+        width: 300px;
+    }
+
+    .services-section ul li {
+        padding: 230px 0px;
+    }
+}
+
+@media (max-width: 1020px) {
     .services-section ul {
         gap: 10px;
+    }
+    
+    .services-section ul {
+        grid-template-columns: repeat(1, minmax(250px, 1fr));
     }
 }
 
 @media (max-width: 800px) {
-    .services-section ul {
-        grid-template-columns: repeat(1, minmax(250px, 1fr));
-    }
 
     .services-section ul li {
-        margin: 50px 0px;
+        margin: 80px 0px;
     }
 }
 
@@ -508,7 +534,7 @@ header nav ul li:not(:first-child) {
 }
 
 .projects-section .projects-container figure::before {
-    content: 'image';
+    content: 'Image';
     position: absolute;
     width: 100%;
     height: 100%;
@@ -518,7 +544,27 @@ header nav ul li:not(:first-child) {
     top: 70px;
     background-color: var(--main-color);
     text-align: center;
-    text-decoration: underline;}
+    text-decoration: underline;
+    background-position: center;
+}
+
+.projects-section .projects-container figure:nth-child(1):before {
+    content: '';
+    filter: brightness(0.5);
+    background-image: url(../assets/projects-images/develop-ten-hospitals.JPG);
+}
+
+.projects-section .projects-container figure:nth-child(2):before {
+    content: '';
+    filter: brightness(0.5);
+    background-image: url(../assets/projects-images/_X4A3791.JPG);
+}
+
+.projects-section .projects-container figure:nth-child(3):before {
+    content: '';
+    filter: brightness(0.5);
+    background-image: url(../assets/projects-images/develop-emergancy-rooms.JPG);
+}
 
 .projects-section .projects-container figure::after {
     content: '';
@@ -529,6 +575,10 @@ header nav ul li:not(:first-child) {
     z-index: -2;
     border: 2px solid var(--main-color);
     right: 0px;
+}
+
+.projects-section .projects-container figure:hover::after {
+
 }
 
 .projects-section .projects-container figure .text-conatiner {
@@ -607,35 +657,77 @@ header nav ul li:not(:first-child) {
     margin-bottom: 100px;
 }
 
-.clients-section .images-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
-}
-.clients-section .images-container .image-container {
-    text-align: center;
-    padding: 20px 0px;
-    border-bottom: 3px solid var(--main-color);
+.clients-section .slider {
+    overflow: hidden;
+    padding: 60px 0px;
+    white-space: nowrap;
+    position: relative;
 }
 
-.clients-section .images-container .image-container img {
-    width: 150px;
+.clients-section .slider::before,
+.clients-section .slider::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    width: 250px;
+    height: 100%;
+    z-index: 2;
 }
 
-@media (max-width: 800px) {
-    .clients-section .images-container {
-        grid-template-columns: repeat(2, 1fr);
+.clients-section .slider::after {
+    background: linear-gradient(to right, transparent, white);
+    right: 0px;
+}
+
+.clients-section .slider::before {
+    left: 0px;
+    background: linear-gradient(to left, transparent, white);
+}
+
+.clients-section .slider:hover .slider-track{
+    animation-play-state: paused;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0px);
+    }
+    to {
+        transform: translateX(-100%);
     }
 }
 
-@media (max-width: 500px) {
-    .clients-section .images-container {
-        grid-template: none;
-        margin-top: 20px;
+.clients-section  .slider-track {
+    display: inline-block;
+    animation: 35s slide infinite linear;
+}
+
+.clients-section .slider-track img {
+    width: 200px;
+    vertical-align: middle;
+    margin: 0px 100px;
+}
+
+.clients-section .slider-track img.small-image {
+    width: 350px;
+}
+
+@media (max-width: 900px) {
+    .clients-section {
+        margin: 120px 0px;
+        padding:  0px;
     }
 
-    .clients-section h1 {
-        font-size: 30px;
+    @media (max-width: 700px) {
+        .clients-section .slider-track img {
+            width: 150px;
+            margin: 0px 70px;
+        }
+
+        .clients-section .slider::before,
+        .clients-section .slider::after {
+            width: 200px;
+        }
     }
 }
 
