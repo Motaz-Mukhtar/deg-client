@@ -113,8 +113,18 @@ header nav ul li:hover a {
     text-decoration: underline;
 }
 
-header nav ul li:not(:first-child) {
-    margin-left: 60px;
+header nav ul li {
+    padding: 0px 30px;
+}
+
+header nav ul li:not(:last-child) {
+    border-right: 2px solid var(--main-color);
+}
+
+@media (max-width: 1100px) {
+    header nav ul li {
+        padding: 0px 15px;
+    }
 }
 
 @media (max-width: 950px) {
@@ -127,6 +137,12 @@ header nav ul li:not(:first-child) {
         background-color: var(--background-color);
         z-index: 10;
         padding: 50px 10px;
+    }
+
+    header nav ul li:not(:first-child) {
+        padding-bottom: 10px;
+        border-right: none;
+        border-bottom: 2px solid var(--main-color);
     }
 
     header nav ul li:not(:first-child) {
@@ -150,13 +166,20 @@ header nav ul li:not(:first-child) {
         cursor: pointer;
    }
 }
+
+@media (max-width: 600px) {
+    header .logo img {
+        width: 150px;
+    }
+}
 /* End Header */
 /* Start Landing Section */
 .landing-container {
     width: fit-content;
-    margin: 120px 50px;
+    margin: 80px auto;
     padding: 0px 50px;
     color: var(--main-color);
+    text-align: center;
 }
 
 .landing-container h1 {
@@ -172,15 +195,12 @@ header nav ul li:not(:first-child) {
 
 .landing-container .landing-button {
     margin-top: 30px;
-    padding: 10px 20px;
+    padding: 15px 50px;
     font-weight: bold;
     font-size: 18px;
     background-color: var(--main-color);
     border: 3px solid var(--main-color);
     transition: 0.5s;
-}
-
-.landing-container .landing-button a {
     color: #ffffff;
     transition: 0.5s;
 }
@@ -189,13 +209,13 @@ header nav ul li:not(:first-child) {
     background-color: transparent;
 }
 
-.landing-container .landing-button:hover a {
+.landing-container .landing-button:hover {
     color: var(--main-color);
 }
 
 .landing-container .landing-scroll {
     position: absolute;
-    left: 50%;
+    right: 50%;
     font-weight: 900;
     font-size: 25px;
     margin-top: 0px;
@@ -204,24 +224,33 @@ header nav ul li:not(:first-child) {
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
     cursor: pointer;
+    bottom: 6%;
 }
 
 @keyframes scroll-animation {
     0% {
-        margin-top: 0px;
+        transform: translateY(0px);
     }
     50% {
-        margin-top: 10px;
+        transform: translateY(10px);
     }
-
+    
     100% {
-        margin-top: 0px;
+        transform: translateY(0px);
     }
 }
 
+@media (max-width: 770px) {
+    .landing-container {
+        margin: 120px auto;
+    }
+}
+
+
 @media (max-width: 700px) {
     .landing-container {
-        margin: 100px 20px;
+        margin: 100px auto;
+        padding: 0px;
     }
 
     .landing-container h1 {
@@ -232,6 +261,18 @@ header nav ul li:not(:first-child) {
         width: 400px;
         font-size: 15px;
     }
+}
+
+@media (max-width: 600px) {
+    .landing-container .landing-scroll {
+        bottom: 10%;
+    }
+
+    .landing-container .landing-button {
+        padding: 10px 30px;
+        font-size: 15px;
+    }
+
 }
 
 @media (max-width: 500px) {
@@ -267,7 +308,7 @@ header nav ul li:not(:first-child) {
 /* Start strategic Section */
 .strategic-section {
     padding: 0px 30px;
-    margin-top: 170px;
+    margin-top: 80px;
 }
 
 .strategic-section .article-container {
@@ -275,38 +316,32 @@ header nav ul li:not(:first-child) {
     justify-content: space-around;
     align-items: center;
     margin: 40px 50px;
-    padding: 80px 0px;
+    padding: 60px 0px;
 }
 
 .strategic-section .article-container:not(:last-child) {
     border-bottom: 2px solid var(--second-main-color);
 }
 
-.strategic-section .article-container:nth-child(2) h1 {
+.strategic-section .article-container:nth-child(2) div.title-container {
     order: 2;
 }
 
-.strategic-section .article-container h1 {
+.strategic-section .article-container .title-container {
+    display: flex;
+    align-items: center;
+}
+
+.strategic-section .article-container .title-container i {
+    font-size: 40px;
+    margin-right: 50px;
+}
+
+.strategic-section .article-container .title-container h1 {
     position: relative;
     font-size: 45px;
     font-weight: bold;
     color: var(--second-text-color);
-}
-
-.strategic-section .article-container h1::before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -10px;
-    padding: 35px;
-    border: solid var(--second-main-color) 3px;
-    z-index: -1;
-    transition: 2s;
-}
-
-.strategic-section .article-container:not(:nth-child(2)):hover h1::before {
-    left: 80px;
-    transition: 1s;
 }
 
 .strategic-section .article-container:nth-child(2):hover h1::before {
@@ -335,8 +370,14 @@ header nav ul li:not(:first-child) {
 .strategic-section .article-container article p {
     width: 500px;
     line-height: 1.5;
-    font-size: 17px;
+    font-size: 20px;
     color: var(--second-text-color);
+}
+
+@media (max-width: 950px) {
+    .strategic-section .article-container {
+        margin: 40px 10px;
+    }
 }
 
 @media (max-width: 800px) {
@@ -344,7 +385,7 @@ header nav ul li:not(:first-child) {
         flex-wrap: wrap;
     }
 
-    .strategic-section .article-container:nth-child(2) h1 {
+    .strategic-section .article-container:nth-child(2) div.title-container {
         order: 0;
     }
 
@@ -355,11 +396,14 @@ header nav ul li:not(:first-child) {
     .strategic-section .article-container article {
         margin-top: 80px;
     }
-}
 
-@media (max-width: 770px) {
-    .landing-container {
-        margin: 120px 0px;
+    .strategic-section .article-container article {
+        border-left: none;
+        border-top: 3px solid var(--main-color);
+    }
+
+    .strategic-section .article-container:not(:last-child) {
+        border-bottom-width: 1px;
     }
 }
 
@@ -370,11 +414,6 @@ header nav ul li:not(:first-child) {
 
     .strategic-section .article-container h1 {
         font-size: 30px;
-    }
-
-    .strategic-section .article-container article {
-        border-left: none;
-        border-top: 3px solid var(--main-color);
     }
 
     .strategic-section .article-container article p {
@@ -447,6 +486,8 @@ header nav ul li:not(:first-child) {
 }
 
 .services-section ul li .text-face-back {
+    display: flex;
+    align-items: center;
     background-color: var(--main-color);
     color: var(--text-color);
     transform: rotateY(180deg);
@@ -489,14 +530,14 @@ header nav ul li:not(:first-child) {
     }
     
     .services-section ul {
-        grid-template-columns: repeat(1, minmax(250px, 1fr));
+        grid-template-columns: repeat(1, 500px);
+        justify-content: center;
     }
 }
 
-@media (max-width: 800px) {
-
-    .services-section ul li {
-        margin: 80px 0px;
+@media (max-width: 525px) {
+    .services-section ul {
+        grid-template-columns: repeat(1, 400px);
     }
 }
 
@@ -902,15 +943,22 @@ footer .footer-sections .get-in-touch .social-media-icons a {
     color: var(--main-color);
 }
 
+@media  (max-width: 1024px) {
+    footer .footer-sections {
+        gap: 50px;
+    }
+}
+
 @media (max-width: 800px) {
     footer .footer-sections section {
         margin: 20px 0px;
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     footer .footer-sections {
         justify-content: center;
+        gap: 25px;
     }
 }
 

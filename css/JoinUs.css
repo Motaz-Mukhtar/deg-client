@@ -33,8 +33,10 @@
 }
 
 .join-us-section .user-form textarea {
-    height: 100px;
+    height: 150px;
     outline-color: var(--main-color);
+    resize: none;
+    padding: 5px;
 }
 
 .join-us-section .user-form input[type="file"] {
