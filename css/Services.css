@@ -1,3 +1,12 @@
+.parent-container {
+    height: 100%;
+}
+
+.landing-container {
+    width: fit-content;
+    margin: 50px auto;
+}
+
 svg {
     fill: white;
     width: 100px;
@@ -9,13 +18,26 @@ svg {
 }
 
 .services {
-    padding: 20px 10px;
-    margin: 20px 10px;
+    padding: 20px 30px;
+    margin: 20px 30px;
 }
 
 .services .service {
     display: flex;
     align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: fit-content;
+    padding: 40px 50px;
+    margin: 50px 0px;
+    border-radius: 5px;
+}
+
+.services .service:nth-child(2) {
+    margin-left: 300px;
+}
+
+.services .service:nth-child(3) {
+    margin-left: 600px;
 }
 
 .services .service .description {
@@ -31,8 +53,8 @@ svg {
 
 .services .service .description p {
     font-size: 20px;
-    width: 500px;
-    line-height: 1.5;
+    width: 900px;
+    line-height: 1.7;
 }
 
 .services .projects-container {

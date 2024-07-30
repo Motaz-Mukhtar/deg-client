@@ -1,3 +1,7 @@
+.parent-container {
+    height: 100%;
+}
+
 .landing-container {
     margin: 80px auto;
 }
