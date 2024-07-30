@@ -114,6 +114,12 @@ svg {
     margin-left: 10px;
 }
 
-/* .services .service:nth-child(2) .description {
-    order: 2;
-} */
+@media (max-width: 1300px) {
+    .services .service:nth-child(2) {
+        margin-left: 100px;
+    }
+    
+    .services .service:nth-child(3){
+        margin-left: 200px;
+    }
+}
