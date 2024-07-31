@@ -61,7 +61,7 @@ img {
 /* Start Header */
 
 .load-container {
-    position: fixed;
+    position: absolute;
     top: 0px;
     left: 0px;
     width: 100%;
@@ -1030,7 +1030,8 @@ footer .footer-sections .get-in-touch .email-field input[type="submit"] {
 
 footer .footer-sections .get-in-touch .email-field input[type="submit"]:hover {
     background-color: transparent;
-    color: var(--main-color);
+    border-color: white;
+    color: white;
 }
 
 footer .footer-sections .get-in-touch .social-media-icons h6 {
@@ -1042,6 +1043,11 @@ footer .footer-sections .get-in-touch .social-media-icons a {
     font-size: 30px;
     margin: 0px 10px;
     color: var(--main-color);
+}
+
+footer .footer-sections .get-in-touch .social-media-icons a:hover {
+    transition: 0.5s;
+    color: white;
 }
 
 .copyright-section {

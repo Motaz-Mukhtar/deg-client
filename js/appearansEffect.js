@@ -4,8 +4,8 @@ console.log(headerContainer);
 
 window.addEventListener('load', () => {
     document.querySelector('.load-container').style.cssText = `
-        left: 100%;
         opacity: 0;
+        width: 0%;
         transition: 2s;
     `;
     headerContainer[0].style.cssText = `

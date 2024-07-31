@@ -7,7 +7,12 @@
     margin: 50px auto;
 }
 
-svg {
+.services {
+    padding: 20px 30px;
+    margin: 20px 30px;
+}
+
+.services svg {
     fill: white;
     width: 100px;
     height: 100px;
@@ -15,11 +20,6 @@ svg {
     background-color: gray;
     padding: 5px;
     margin-bottom: 20px;
-}
-
-.services {
-    padding: 20px 30px;
-    margin: 20px 30px;
 }
 
 .services .service {
@@ -114,12 +114,80 @@ svg {
     margin-left: 10px;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1550px) {
     .services .service:nth-child(2) {
         margin-left: 100px;
     }
     
     .services .service:nth-child(3){
         margin-left: 200px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .services .service:nth-child(2) {
+        margin-left: 50px;
+    }
+    
+    .services .service:nth-child(3){
+        margin-left: 0px;
+    }
+}
+
+
+@media (max-width: 1150px) {
+    .services .service:nth-child(2) {
+        margin-left: 0px;
+    }
+    
+    .services .service:nth-child(3){
+        margin-left: 0px;
+    }
+
+}
+
+@media (max-width: 1000px) {
+    .services {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .services .service {
+        text-align: center;
+    }
+
+    .services .service .description p {
+        width: fit-content;
+    }
+
+    .services .service .description h2 {
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 700px) {
+    .services svg {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .services .service .description h2 {
+        font-size: 40px;
+    }
+
+    .services .service .description p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 500px) {
+    .services .service {
+        padding: 40px 10px;
+    }
+
+    .services .service .description h2 {
+        font-size: 30px;
     }
 }
