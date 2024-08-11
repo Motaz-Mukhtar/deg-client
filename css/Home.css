@@ -3,8 +3,9 @@
     /* background-color: #f6f6f6 !important Gray */
     /* --main-color: #c9a22e;   */
     --main-color: #2A2B2F;
-    --second-main-color: #89772e;
-    --background-color: #151615;
+    --second-main-color: #000;
+    /* --second-main-color: #89772e; */
+    --background-color: #151615; 
     /* --background-color: #4b4e53; */
     --text-color: #f8f6f2;
     --second-text-color: #151615;
@@ -20,6 +21,26 @@
     margin: 0px;
     transition: 0.5s;
 }
+
+/* width
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+/* ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+} */
+
+/* Handle */
+/* ::-webkit-scrollbar-thumb {
+  background: #888;
+} */
+
+/* Handle on hover */
+/* ::-webkit-scrollbar-thumb:hover {
+  background: #555;
+} */
 
 body {
     background-color: #ffffff;
@@ -66,7 +87,8 @@ img {
     left: 0px;
     width: 100%;
     height: 100%;
-    background-color: #000;
+    background-color: #ffffff42;
+    backdrop-filter: blur(9px);
 }
 
 .parent-container {
@@ -82,10 +104,9 @@ img {
     top: 0px;
     width: 100%;
     height: 100%;
-    filter: brightness(0.2);
     z-index: -1;
     /* background-image: url(../assets/landing-background-image.jpg); */
-    background-image: url(../assets/home-page-images/imageedit_1_2301488099.jpg);
+    background-image: url(../assets/home-page-images/landing-page-background-image.jpg);
     background-size: cover;
     background-attachment: fixed;
 }
@@ -103,15 +124,23 @@ header .logo {
     margin: 30px 0px;
 }
 
+header .logo > img {
+    width: 200px;
+}
+
 header nav > ul {
     display: flex;
+}
+
+header nav ul > li {
+    font-size: 20px;
 }
 
 header nav .menu-bar {
     display: none;
 }
 
-header nav ul li:hover > a {
+header nav ul li a:hover {
     text-decoration: underline;
 }
 
@@ -125,39 +154,15 @@ header nav ul li.menu-close {
 }
 
 header nav ul li > a {
-    color: white;
+    color: var(--second-main-color);
 }
 
 header nav ul > li {
     padding: 15px 30px;
 }
 
-/* header nav ul li:not(:last-child) {
-    border-right: 2px solid #ffffff;
-} */
-
-header nav ul li.services-menu {
+header nav ul li.menu {
     z-index: 3;
-}
-
-header nav ul li.services-menu:hover .sub-menu {
-    visibility: visible;
-    opacity: 1;
-    bottom: -170px;
-}
-
-header nav ul > li.services-menu:not(:hover) .sub-menu {
-    clip-path: circle(0);
-}
-
-header nav ul > li.projects-menu:hover .sub-menu {
-    visibility: visible;
-    opacity: 1;
-    bottom: -420px;
-}
-
-header nav ul > li.projects-menu:not(:hover) .sub-menu {
-    clip-path: circle(0);
 }
 
 header nav ul li.menu .sub-menu {
@@ -165,47 +170,6 @@ header nav ul li.menu .sub-menu {
     opacity: 0;
     position: absolute;
     background-color: var(--background-color);
-    padding: 20px 10px;
-    transition: 0.3s;
-}
-
-header nav ul li.services-menu .sub-menu {
-    right: 450px;
-    bottom: -150px;
-}
-
-header nav ul li.projects-menu .sub-menu {
-    right: 320px;
-    bottom: -400px;
-    width: 100%;
-    right: 0px;
-    display: flex;
-    justify-content: space-around;
-    z-index: 6;
-}
-
-header nav ul li.projects-menu .sub-menu > li:not(:first-child) {
-    border-left: 2px solid;
-}
-
-header nav ul li.projects-menu .sub-menu li ul li {
-    padding: 30px 0px;
-    color: white;
-    line-height: 1.5;
-    width: 400px;
-}
-
-header nav ul li.projects-menu .sub-menu li ul li:hover {
-    transform: translateX(10px);
-}
-
-header nav ul li.projects-menu .sub-menu li a {
-    font-size: 25px;
-}
-
-header nav ul li.menu .sub-menu li {
-    border-right: none;
-    color: var(--main-color);
     transition: 0.3s;
 }
 
@@ -213,18 +177,85 @@ header nav ul li.menu .sub-menu li a {
     color: rgb(143, 143, 143);
 }
 
-header nav ul li.services-menu .sub-menu li:hover {
-    transform: translateX(10px);
+header nav ul li.menu .sub-menu li {
+    padding: 25px 30px;
 }
 
-header nav ul li.services-menu .sub-menu li:hover a {
-    color: white;
+header nav ul li.menu:hover .sub-menu {
+    visibility: visible;
+    opacity: 1;
+    bottom: -160px;
+}
+
+header nav ul li.menu .sub-menu li {
+    font-size: 18px;
+}
+
+header nav ul > li.menu:not(:hover) .sub-menu {
+    clip-path: circle(0);
+}
+
+header nav ul li.menu .sub-menu {
+    bottom: -140px;
+}
+
+header nav ul li.menu .sub-menu li:hover {
+    background-color: white;
+}
+
+header nav ul li.menu .sub-menu li:hover a {
+    /* color: white; */
+    color: var(--second-main-color);
     text-decoration: none;
 }
 
-header nav ul li.menu .sub-menu li:not(:last-child) {
-    padding-bottom: 30px;
+header nav ul li.projects-menu .sub-menu .sub-sub-menu {
+    position: relative;
 }
+
+header nav ul li.projects-menu .sub-menu .projects-sub-menu {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    height: 500px;
+    overflow: scroll;
+    left: 227px;
+    top: 0px;
+    background-color: var(--background-color);
+    color: #8f8f8f;
+}
+
+header nav ul li.projects-menu .sub-sub-menu:nth-child(2) .projects-sub-menu {
+    height: fit-content;
+    overflow: auto;
+}
+
+header nav ul li.projects-menu .sub-menu .sub-sub-menu:hover .projects-sub-menu {
+    visibility: visible;
+    opacity: 1;
+}
+
+header nav ul li.projects-menu .sub-menu .projects-sub-menu li {
+    width: 250px;
+}
+
+header nav ul li.projects-menu .sub-menu .projects-sub-menu li:not(:last-child) {
+    border-bottom: 1px solid #f8f6f2;
+}
+
+header nav ul li.projects-menu .sub-menu .projects-sub-menu li:hover {
+    color: var(--second-main-color);
+    background-color: var(--text-color);
+}
+
+header nav ul li.projects-menu .sub-menu .projects-sub-menu::-webkit-scrollbar {
+    background: transparent;
+}
+
+header nav ul li.projects-menu .sub-menu .projects-sub-menu::-webkit-scrollbar-thumb {
+    background: var(--text-color);
+}
+
 
 @media (max-width: 1100px) {
     header nav ul li {
@@ -247,7 +278,7 @@ header nav ul li.menu .sub-menu li:not(:last-child) {
     header nav ul li:not(:first-child) {
         padding-bottom: 10px;
         border-right: none;
-        border-bottom: 2px solid var(--main-color);
+        border-bottom: 2px solid var(--second-main-color);
     }
 
     header nav ul li:not(:first-child) {
@@ -283,8 +314,9 @@ header nav ul li.menu .sub-menu li:not(:last-child) {
 .landing-container {
     width: fit-content;
     margin-top: 180px;
-    margin-left: 220px;
-    color: white;
+    margin-left: 100px;
+    /* color: white; */
+    color: var(--second-main-color);
 }
 
 .landing-container .landing-text {
@@ -292,7 +324,7 @@ header nav ul li.menu .sub-menu li:not(:last-child) {
 }
 
 .landing-container h1 {
-    font-size: 70px;
+    font-size: 60px;
     transform: translateY(200px);
 }
 
@@ -302,25 +334,6 @@ header nav ul li.menu .sub-menu li:not(:last-child) {
     width: 600px;
     line-height: 1.5;
     transform: translateY(200px);
-}
-
-.landing-container .landing-button {
-    margin-top: 30px;
-    padding: 15px 50px;
-    font-weight: bold;
-    font-size: 18px;
-    background-color: var(--main-color);
-    border: 3px solid #ffffff;
-    color: #ffffff;
-    transition: 0.3s;
-}
-
-.landing-container .landing-button:hover {
-    background-color: transparent;
-}
-
-.landing-container .landing-button:hover {
-    color: var(--main-color);
 }
 
 .landing-container .landing-scroll {
