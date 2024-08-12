@@ -19,10 +19,13 @@ function containersAppear() {
 }
 
 window.addEventListener('load', () => {
-    document.querySelector('.load-container').style.cssText = `
-        width: 50%;
-        transition: 2s;
-    `;
+    if (window.innerWidth > 770) {
+        document.querySelector('.load-container').style.cssText = `
+            width: 50%;
+            transition: 2s;
+        `;
+    }
+
     headerContainer[0].style.cssText = `
         -webkit-transform: translateY(0px);
         transform: translateY(0px);

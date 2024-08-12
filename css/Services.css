@@ -65,8 +65,12 @@
         justify-content: center;
     }
 
-    .services .service {
+    .services .service .icon-container {
         text-align: center;
+    }
+
+    .services .service .description h2 {
+        margin: 30px auto;
     }
 
     .services .service .description p {
