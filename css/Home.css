@@ -78,6 +78,10 @@ img {
     opacity: 0;
 }
 
+.select {
+    color: var(--text-color) !important;
+}
+
 /* End Global Rules*/
 
 /* Start Header */
