@@ -287,7 +287,8 @@ header nav ul li.projects-menu .sub-menu .projects-sub-menu::-webkit-scrollbar-t
         background-color: var(--background-color);
         z-index: 10;
         padding: 50px 10px;
-        overflow: scroll;
+        overflow-y: scroll;
+        overflow-x: hidden;
     }
 
     /* width */
@@ -341,10 +342,32 @@ header nav ul li.projects-menu .sub-menu .projects-sub-menu::-webkit-scrollbar-t
         cursor: pointer;
    }
 
+   header nav ul li.menu-close {
+        right: -200px;
+    }
+
+   header nav ul li.menu  {
+        position: relative;
+   }
+
+   header nav ul li.menu::after {
+        font-family: 'Font Awesome 5 Free';
+        content: '\f054';
+        position: absolute;
+        color: var(--text-color);
+        right: 200px;
+        top: 0px;
+        transition: 0.5s;
+    }
+
    header nav ul li.menu .sub-menu {
         height: 0px;
         position: unset;
         margin: 0px;
+    }
+
+    header nav ul li.menu:hover::after {
+        transform: rotate(90deg);
     }
 
     header nav ul li.menu:hover .sub-menu {
@@ -362,10 +385,28 @@ header nav ul li.projects-menu .sub-menu .projects-sub-menu::-webkit-scrollbar-t
         height: 0px;
     }
 
+    header nav ul li.menu li.sub-sub-menu::after {
+        font-family: 'Font Awesome 5 Free';
+        content: '\f054';
+        position: absolute;
+        color: #8f8f8f;
+        right: 0px;
+        top: 0px;
+        transition: 0.5s;
+    }
+
+    header nav ul li.menu li.sub-sub-menu:hover::after {
+        transform: rotate(90deg);
+    }
+
     header nav ul li.projects-menu .sub-menu .sub-sub-menu:hover .projects-sub-menu {
         margin-top: 40px;
         margin-bottom: 40px;
         height: 400px;
+    }
+
+    header nav ul li.projects-menu .sub-menu .sub-sub-menu:nth-child(2):hover .projects-sub-menu {
+        height: 150px;
     }
 
     header nav ul li.projects-menu .sub-menu .sub-sub-menu .projects-sub-menu li {

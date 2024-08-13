@@ -78,6 +78,12 @@
     }
 }
 
+@media (max-width: 950px) {
+    .landing-container {
+        text-align: center;
+    }
+}
+
 @media (max-width: 700px) {
     .services svg {
         width: 80px;
@@ -94,11 +100,21 @@
 }
 
 @media (max-width: 500px) {
+    .services {
+        padding: 10px;
+        margin: 10px;
+    }
+
     .services .service {
         padding: 40px 10px;
     }
 
     .services .service .description h2 {
         font-size: 30px;
+        text-align: center;
+    }
+
+    .services .service .description ul li {
+        margin: 20px;
     }
 }
