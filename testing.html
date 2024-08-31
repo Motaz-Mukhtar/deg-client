@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        /* styles.css */
+
+/* Slider Container */
+.slider {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Slides Styling */
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+/* Individual Slide */
+.slide {
+    min-width: 100%;
+    height: auto;
+}
+
+/* Navigation Controls */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.next {
+    right: 0;
+}
+
+.prev {
+    left: 0;
+}
+
+    </style>
+</head>
+<body>
+
+<div class="slider">
+    <!-- Slider Images -->
+    <div class="slides">
+        <img src="https://via.placeholder.com/600x300?text=Slide+1" class="slide">
+        <img src="https://via.placeholder.com/600x300?text=Slide+2" class="slide">
+        <img src="https://via.placeholder.com/600x300?text=Slide+3" class="slide">
+    </div>
+    
+    <!-- Navigation Controls -->
+    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+</div>
+
+<script>
+    // script.js
+
+let currentIndex = 0;
+const slides = document.querySelectorAll('.slide');
+
+// Function to Show the Next or Previous Slide
+function changeSlide(step) {
+    currentIndex += step;
+
+    if (currentIndex >= slides.length) {
+        currentIndex = 0; // Loop back to the first slide
+    } else if (currentIndex < 0) {
+        currentIndex = slides.length - 1; // Loop to the last slide
+    }
+
+    // Update the position of the slides
+    updateSlidePosition();
+}
+
+// Function to Update the Slide Position
+function updateSlidePosition() {
+    const slideWidth = slides[0].clientWidth;
+    document.querySelector('.slides').style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+}
+
+// Function to Auto-Advance the Slider
+function autoSlide() {
+    changeSlide(1); // Move to the next slide
+    setTimeout(autoSlide, 3000); // Change every 3 seconds
+}
+
+// Initialize the Auto Slide
+window.onload = function() {
+    autoSlide();
+};
+
+</script>
+</body>
+</html>

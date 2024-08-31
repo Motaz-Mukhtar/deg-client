@@ -5,3 +5,11 @@
 .landing-container {
     margin: 100px auto;
 }
+
+.caption a {
+    color: var(--text-color);
+}
+
+.caption a:hover {
+    text-decoration: underline;
+}
