@@ -33,3 +33,19 @@ function autoSlide() {
 window.onload = function() {
     autoSlide();
 };
+
+
+// Function to Zoom Image
+function zoomImage(element) {
+    const modal = document.getElementById("zoomModal");
+    const modalImg = document.getElementById("zoomedImage");
+    console.log(element)
+    const imgSrc = element.previousElementSibling.previousElementSibling.previousElementSibling.children[currentIndex].src;
+    modal.style.display = "block";
+    modalImg.src = imgSrc;
+}
+
+// Function to Close the Modal
+function closeModal() {
+    document.getElementById("zoomModal").style.display = "none";
+}
