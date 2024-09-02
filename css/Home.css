@@ -255,7 +255,7 @@ header nav ul li.menu .sub-menu li:hover {
     background-color: white;
 }
 
-header nav ul li.menu .sub-menu li:hover a {
+header nav ul li.menu .sub-menu li:hover > a {
     color: var(--second-main-color);
     text-decoration: none;
 }
@@ -291,12 +291,15 @@ header nav ul li.projects-menu .sub-menu .projects-sub-menu li {
 }
 
 header nav ul li.projects-menu .sub-menu .projects-sub-menu li:not(:last-child) {
-    border-bottom: 1px solid #f8f6f2;
+    border-top: 1px solid #f8f6f2;
+}
+
+header nav ul li.projects-menu .sub-menu .projects-sub-menu li:hover {
+    background-color: var(--text-color);
 }
 
 header nav ul li.projects-menu .sub-menu .projects-sub-menu li:hover {
     color: var(--second-main-color);
-    background-color: var(--text-color);
 }
 
 header nav ul li.projects-menu .sub-menu .projects-sub-menu::-webkit-scrollbar {
@@ -524,9 +527,8 @@ header nav ul li.projects-menu .sub-menu .projects-sub-menu::-webkit-scrollbar-t
 }
 
 .landing-container p {
-    font-size: 3vw;
+    font-size: 40px;
     font-weight: bold;
-    /* margin-top: 40px; */
     width: 500px;
     line-height: 1.5;
     transform: translateY(200px);

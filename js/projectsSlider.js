@@ -41,7 +41,7 @@ function zoomImage(element) {
     const modalImg = document.getElementById("zoomedImage");
     console.log(element)
     const imgSrc = element.previousElementSibling.previousElementSibling.previousElementSibling.children[currentIndex].src;
-    modal.style.display = "block";
+    modal.style.display = "flex";
     modalImg.src = imgSrc;
 }
 
