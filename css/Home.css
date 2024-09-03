@@ -14,6 +14,28 @@
 
 
 /* Start Global Rules*/
+
+
+@font-face {
+    font-family: 'gec-light-font';
+    src: url(../assets/font-style/en/ExpoArabic-Light.ttf);
+}
+
+@font-face {
+    font-family: 'gec-medium-font';
+    src: url(../assets/font-style/en/ExpoArabic-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'gec-bold-font';
+    src: url(../assets/font-style/en/ExpoArabic-Bold.otf);
+}
+
+@font-face {
+    font-family: 'gec-semiBold-font';
+    src: url(../assets/font-style/en/ExpoArabic-SemiBold.ttf);
+}
+
 * {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -45,7 +67,7 @@ html::-webkit-scrollbar-thumb:hover {
 
 body {
     background-color: #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'gec-light-font', Arial, Helvetica, sans-serif;
 }
 
 html {
