@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
-<html dir="rtl" lang="ar">
+<html dir="ltr" lang="ar">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Font Awesome Library -->
      <link rel="stylesheet" href="../css/all.min.css">
@@ -10,198 +10,352 @@
     <!-- Main Css File -->
      <link rel="stylesheet" href="../css/AboutUs.css">
     <!-- Google Font (Main Font Style) -->
-    <title>من نحن | GEC </title>
-    <meta http-equiv="Content-Language" content="ar"></head>
-    <style>
-        .who-we-are-section .s2 .image-container {
-            border-left: none;
-            border-right: 5px solid var(--main-color);
-        }
-        
-        .who-we-are-section p {
-            font-size: 20px;
-        }
-        
-        .brief-section p {
-            font-size: 20px;
-        }
-        
-        aside p {
-            font-size: 20px;
-        }
-
-        footer .footer-sections .office-info .contact-info li h6, footer .footer-sections .office-info .contact-info li a {
-            margin-right: 20px;
-            margin-left: 0px;
-        }
-
-        header nav ul > li.menu-close {
-            right: -225px;
-        }
-
-        header nav ul li:not(:last-child, :first-child) {
-            border: none;
-            border-left: 2px solid var(--main-color);
-        }
-
-        @media (max-width: 950px) {
-            header nav ul li:not(:first-child) {
-                border-left: none;
-                border-bottom: 2px solid var(--main-color);
-            }
-        }
-    </style>
+    <title>من نحن || GEC</title>
+</head>
 <body>
+    <!-- Loader Container -->
+    <div class="loader-container">
+        <div class="chars-logo">
+            <img src="../assets/G-character-logo-white.svg" alt="char-logo">
+            <img src="../assets/E-character-logo-white.svg" alt="char-logo">
+            <img src="../assets/C-character-logo-white.svg" alt="char-logo">
+        </div>
+    </div>
+
+
     <div class="image-background-container parent-container">
         <header>
             <div class="logo">
-                <img src="../assets/main-logo.png" alt="Logo">
+                <img src="../assets/Logo-original.png" alt="Logo">
             </div>
             <nav>
                 <div class="div">
                     <div class="menu-bar">
-                        <i class="fas fa-bars" style="color: #c9a22e;"></i>
+                        <i class="fas fa-bars" style="color: #000;"></i>
                     </div>
                 </div>
                 <ul class="nav-bar">
                     <li class="menu-close">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#c9a22e"><path d="m332-285.33 148-148 148 148L674.67-332l-148-148 148-148L628-674.67l-148 148-148-148L285.33-628l148 148-148 148L332-285.33ZM480-80q-82.33 0-155.33-31.5-73-31.5-127.34-85.83Q143-251.67 111.5-324.67T80-480q0-83 31.5-156t85.83-127q54.34-54 127.34-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 82.33-31.5 155.33-31.5 73-85.5 127.34Q709-143 636-111.5T480-80Zm0-66.67q139.33 0 236.33-97.33t97-236q0-139.33-97-236.33t-236.33-97q-138.67 0-236 97-97.33 97-97.33 236.33 0 138.67 97.33 236 97.33 97.33 236 97.33ZM480-480Z"/></svg>                    </li>
-                    <li><a href="./Home-ar.html">الصفحة الرئيسية </a></li>
-                    <li><a href="./AboutUs-ar.html" class="select">معلومات عنا </a></li>
-                    <li><a href="./Home-ar.html#services">الخدمات </a></li>
-                    <li><a href="./Projects-ar.html">مشاريعنا </a></li>
-                    <li><a href="./JoinUs-ar.html">انضم إلينا </a></li>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="white"><path d="m332-285.33 148-148 148 148L674.67-332l-148-148 148-148L628-674.67l-148 148-148-148L285.33-628l148 148-148 148L332-285.33ZM480-80q-82.33 0-155.33-31.5-73-31.5-127.34-85.83Q143-251.67 111.5-324.67T80-480q0-83 31.5-156t85.83-127q54.34-54 127.34-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 82.33-31.5 155.33-31.5 73-85.5 127.34Q709-143 636-111.5T480-80Zm0-66.67q139.33 0 236.33-97.33t97-236q0-139.33-97-236.33t-236.33-97q-138.67 0-236 97-97.33 97-97.33 236.33 0 138.67 97.33 236 97.33 97.33 236 97.33ZM480-480Z"/></svg>                    </li>
+                    <li><a href="./Home-ar.html">الصفحة الرئيسية</a></li>
+                    <li class="services-menu menu">
+                        <a href="./Services-ar.html">خدماتنا</a>
+                        <ul class="sub-menu">
+                            <li><a href="./Services-ar.html#Design">الدراسات و التصميم</a></li>
+                            <li><a href="./Services-ar.html#PMO">إدارة المشاريع</a></li>
+                            <li><a href="./Services-ar.html#Supervision">الإشراف</a></li>
+                        </ul>
+                    </li>
+                    <li class="projects-menu menu">
+                        <a href="./Projects-ar.html">مشاريعنا</a>
+                        <ul class="sub-menu">
+                            <li class="sub-sub-menu">
+                                <a href="./Projects-en.html">الدراسات و التصميم</a>
+                                <ul class="projects-sub-menu">
+                                    <a href="./projects-en/studies and design/project-for-surveying-and-studying-the-current-state-of-operations-and-maintenance-in-government-facilities.html">
+                                        <li>
+                                            مشروع مسح ودراسة الوضع الراهن لأعمال التشغيل والصيانة في المرافق الحكومية
+                                        </li>
+                                    </a>
+                                    <a href="./projects-en/studies and design/designing-and-preparing-the-competition-documents-for-the-forensic-medicine-centers-building-project.html">
+                                        <li>
+                                            تصميم وإعداد وثائق المنافسة لمشروع مبنى مراكز طب شرعي
+                                        </li>
+                                    </a>
+                                    <a href="./projects-en/studies and design/designing-and-preparing-the-competition-documents-for-the-health-centers-and-associated-housing-project.html">
+                                        <li>
+                                            تصميم وإعداد وثائق المنافسة لمشروع المراكز الصحية,والإسكان المرافق
+                                        </li>
+                                    </a>
+                                    <a href="#"> <!-- Not Provided Yet -->
+                                        <li>
+                                            معالجة مناطق الحشود بمنطقة المسجد الحرام والطرق والممرات الرابطة بالمشاعر المقدسة        
+                                        </li>
+                                    </a>
+                                    <a href="./projects-en/studies and design/studying-and-designing-the-plaza-(square)-and-the-new-entrance-of-king-fahad-medical-city.html">
+                                        <li>
+                                            دراسة وتصميم الساحة (الميدان) والمدخل الجديد لمدينة الملك فهد الطبية
+                                        </li>
+                                    </a>
+                                    <a href="./projects-en/studies and design/design-services-project-for-ensuring-the-compliance-of-king-faisal-specialist-hospital-and-research-centre-facilities-with-accessibility-standards-(APD)-in-collaboration-with-BW.html">
+                                        <li>
+                                            مشروع خدمات التصميم لامتثال مرافق مستشفى الملك فيصل التخصصي ومركز الأبحاث مع معايير إمكانية الوصول (APD) بالتضامن مع BW
+                                        </li>
+                                    </a>
+                                    <a href="#"> <!-- Not Provided Yet -->
+                                        <li>
+                                            اتفاقية إطارية لخدمات التصميم والدراسات
+                                        </li>
+                                    </a>
+                                    <a href="./design-and-supervision-of-the-clinic-building-at-Al-Hariq-hospital.html">
+                                        <li>
+                                            تصميم وإشراف على مبنى العيادات بمستشفى الحريق
+                                        </li>
+                                    </a>
+                                    <a href="#"> <!-- Not Provided Yet -->
+                                        <li>
+                                            تصميم وإشراف على فيلا سكنية
+                                        </li>
+                                    </a>
+                                    <a href="#"> <!-- Not Provided Yet -->
+                                        <li>
+                                            تصميم وإشراف على فيلا سكنية
+                                        </li>
+                                    </a>
+                                    <a href="#"> <!-- Not Provided Yet -->
+                                        <li>
+                                            مجمع تجاري (1000 متر مربع)
+                                        </li>
+                                    </a>
+                                </ul>
+                            </li>
+
+
+
+                            <li class="sub-sub-menu">
+                                <a href="./Projects-ar.html">إدارة المشاريع</a>
+                                <a href="./projects-en/pmo/providing-project-management-services-for-10-hospitals-and-medical-towers.html">
+                                    <ul class="projects-sub-menu">
+                                        <li>
+                                            تقديم خدمات إدارة المشاريع لعدد 10 مستشفيات وأبراج طبية
+                                        </li>
+                                    </ul>
+                                </a>
+                            </li>
+                            <li class="sub-sub-menu">
+                                <a href="./Projects-en.html">الإشراف</a>
+                                <ul class="projects-sub-menu">
+                                    <a href="./projects-en/supervision/supervision-of-projects-for-the-initiative-to-develop-intensive-care-and-emergency-departments.html">
+                                        <li>
+                                            الإشراف على مشاريع مبادرة تطوير أقسام العناية المركزة والطوارئ
+                                        </li>
+                                    </a>
+                                    <a href="./projects-en/supervision/supervision-of-projects-for-the-development-of-44-health-centers.html">
+                                        <li>
+                                            الإشراف على مشاريع تطوير عدد 44 مركز صحي
+                                        </li>
+                                    </a>
+                                    <a href="./projects-en/supervision/supervision-of-the-implementation-projects-for-58-health-centers-in-the-Asir-region.html">
+                                        <li>
+                                            الإشراف على مشاريع تنفيذ عدد 58 مركز صحي بمنطقة عسير
+                                        </li>
+                                    </a>
+                                    <a href="./projects-en/supervision/providing-consulting-and-engineering-services-for-the-supervision-of-the-construction-project-of-residential-complexes-at-small-stations.html">
+                                        <li>
+                                            تقديم الخدمات الاستشارية والهندسية للإشراف على مشروع إنشاء المجمعات السكنية بالمحطات الصغيرة /المرحلة الثانية (حقل-ضباء-الوجه).
+                                        </li>
+                                    </a>
+                                    <a href="./projects-en/supervision/supervision-of-the-water-network-for-the-city-of-Mastoura.html">
+                                        <li>
+                                            الإشراف على شبكة مياه مدينة مستورة
+                                        </li>
+                                    </a>
+                                    <a href="./projects-en/supervision/providing-engineering-and-consulting-services-for-the-Asir-region.html">
+                                        <li>
+                                            تقديم الخدمات الهندسية والاستشارية لمنطقة عسير
+                                        </li>
+                                    </a>
+                                    <a href="./projects-en/supervision/supervision-of-the-implementation-of-the-internal-water-network-with-the-reservoir-in-Hali-village.html">
+                                        <li>
+                                            الإشراف على تنفيذ شبكة المياه الداخلية مع الخزان قرية حلي
+                                        </li>
+                                    </a>
+                                    <a href="./projects-en/supervision/supervision-of-the-implementation-of-the-internal-water-network-with-the-reservoir-for-the-city-of-Al-Qouz-in-Al-Qunfudhah-Governorate.html">
+                                        <li>
+                                            الإشراف على تنفيذ شبكات المياه الداخلية لمدينة القوز بمنطقة مكة المكرمة
+                                        </li>
+                                    </a>
+                                    <a href="./projects-en/supervision/supervision-of-the-implementation-of-an-underground-reservoir-project-with-a-capacity-of-10,000-cubic-meters-in-Khurma.html">
+                                        <li>
+                                            الإشراف على تنفيذ مشروع خزان أرضي بسعة 10,000 متر مكعب في الخرمة
+                                        </li>
+                                    </a>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="./Careers-ar.html">الوظائف</a></li>
+                    <li><a href="./AboutUs-ar.html" class="select">من نحن</a></li>
                     <li><a href="#ContactUs">تواصل معنا</a></li>
                 </ul>
             </nav>
         </header>
         <div class="landing-container">
             <div class="landing-text">
-                <h1>معلومات عنا - الاستشارات الهندسية </h1>
+                <h1 class="up">من نحن - الاستشارات الهندسية</h1>
             </div>
         </div>
     </div>
 
+    <!-- Strategic Section -->
+    <section class="strategic-section">
+        <div class="up article-container">
+            <div class="title-container">
+                <i class="fas fa-eye" style="color: #2A2B2F;"></i>
+                <h1>رؤيتنا</h1>
+            </div>
+            <article>
+                <p>
+                    تسعى شركتنا لأن تكون رائدة في تقديم خدمات إدارة المشاريع والاستشارات الهندسية، مما يساهم في تحقيق رؤية المملكة 2030.
+                </p>
+            </article>
+        </div>
+        <div class="up article-container right-article-conatiner">
+            <div class="title-container">
+                <i class="fas fa-gem" style="color: #2A2B2F;"></i>
+                <h1>قيمنا</h1>
+            </div>
+            <article>
+                <p>
+                    في استشارات القويحيس الهندسية، نعتز بهذه القيم الأساسية:
+                </p>
+                <ul>
+                    <li>المسؤولية</li>
+                    <li>الإبداع</li>
+                    <li>الاحترافية</li>
+                    <li>الشراكة</li>
+                    <li>التطوير المهني</li>
+                </ul>
+            </article>
+        </div>
+        <div class="up article-container">
+            <div class="title-container">
+                <i class="fas fa-paper-plane" style="color: #2A2B2F;"></i>
+                <h1>الرسالة</h1>
+            </div>
+            <article>
+                <p>
+                    تقديم أعلى مستويات الاحترافية في مجال إدارة المشاريع والاستشارات الهندسية بفضل فريق من المهندسين المتفانين والمتخصصين الذين يسعون لتحقيق رضا العملاء وتقديم حلول مبتكرة.
+                </p>
+            </article>
+        </div>
+    </section>
+
+
+    <!-- About Us -->
     <section class="who-we-are-section">
         <div class="up s1">
             <aside>
-                <h1>من نحن </h1>
-                <img src="../assets/about-us-engineering-consultancy.png" alt="about-us-engineering-consultancy-image">
+                <h1>من نحن</h1>
+                <img src="../assets/about-us-engineering-consultancy-modified.png" alt="about-us-engineering-consultancy-image">
             </aside>
             <div class="text-container">
                 <p>
-                    تأسست شركة القويحص للاستشارات الهندسية في عام 2011 م كمؤسسة متميزة في مجال الاستشارات الهندسية، ومنذ ذلك الحين، حرصنا على تقديم خدماتنا بمستوى عال من
-                    الاحترافية والجودة في مختلف القطاعات الرئيسية. نفتخر بأننا نخدم القطاعات الحكومية والخاصة
-                    على حد سواء، مما يعكس تفانينا في تحقيق أهداف عملائنا وتلبية احتياجاتهم بدقة وفعالية.
+                    تأسست شركة القويحيس للاستشارات الهندسية في عام 2011 كمؤسسة متميزة في مجال الاستشارات الهندسية، ومنذ ذلك الحين، حرصنا على تقديم خدماتنا بمستوى عالٍ من الاحترافية والجودة في مختلف القطاعات 
+                    الرئيسية. نفخر بخدمة القطاعين الحكومي والخاص، مما يعكس التزامنا بتحقيق أهداف عملائنا وتلبية احتياجاتهم بدقة وفعالية.
                 </p>
                 <br>
                 <br>
                 <p>
-                    تعتز شركتنا بتقديم مجموعة متنوعة من الخدمات الهندسية المتميزة عبر العديد من القطاعات.
-                    حيث نساهم على تحسين جودة المباني وتطوير البنية التحتية في القطاع الصحي، بالإضافة إلى
-                    مساهمتنا البارزة في قطاع تحلية المياه وإدارة المرافق.
+                    تفتخر شركتنا بتقديم مجموعة متنوعة من الخدمات الهندسية المتميزة عبر العديد من القطاعات. نساهم في تحسين جودة المباني وتطوير البنية التحتية في قطاع الصحة،
+                    بالإضافة إلى مساهمتنا المتميزة في قطاع تحلية المياه وإدارة المرافق.
                 </p>
             </div>
         </div>
 
         <div class="up s2">
             <div class="image-container">
-                <img src="../assets/Problem-Solving-image.png" alt="Problem-Solving-Image">
+                <img src="../assets/Problem-Solving-image-modified.png" alt="Problem-Solving-Image">
             </div>
             <div class="text-conatiner">
-                <p>بالإضافة إلى ذلك، تعتبر شركتنا بارزة في تقديم الخدمات الهندسية وإدارة المشاريع، حيث نقدم 
-                    حلولاً مخصصة تلبي إحتياجات عملائنا وتضمن تنفيذ المشاريع بأعلى معايير الجودة والكفاءة.  </p>
+                <p>
+                    بالإضافة إلى ذلك، تبرز شركتنا في تقديم خدمات الهندسة وإدارة المشاريع، حيث نقدم حلولًا مخصصة تلبي احتياجات عملائنا وتضمن تنفيذ المشاريع بأعلى معايير الجودة والكفاءة.
+                </p>
                 <br />
                 <br />
-                <p>نحن نفخر بسجل حافل من المشاريع الناجحة التي ساهمت في تحسين جودة حياة المجتمع.  </p>
+                <p>
+                    نفخر بسجل حافل من المشاريع الناجحة التي ساهمت في تحسين جودة حياة المجتمع.
+                </p>
             </div>
         </div>
     </section>
 
     <section class="brief-section">
         <div class="up s3">
-            <h1>نبذة مختصرة عن المؤسس </h1>
-            <img src="../assets/Founder-image.png" alt="Founder-Image">
+            <h1>لمحة عن المؤسس</h1>
+            <img src="../assets/Founder-image-modified.png" alt="Founder-Image">
         </div>
         <div class="up text-container">
-            <p>بعد تخرجه من جامعة الملك فهد للبترول والمعادن في عام 1398 هـ، بدأ المهندس محمد بن عبد الله القويحص مسيرته المهنية كمهندس في مركز الأبحاث والتنمية الصناعية في الدار السعودية. 
-                للخدمات الإستشارية في الفترة من 1398هـ إلى 1402هـ. ثم تولى منصب مدير عام 
-                المشاريع والصيانة بوزارة الصحة للفترة من 1402هـ إلى 1418هـ.  </p>
+            <p>
+                بعد تخرجه من جامعة الملك فهد للبترول والمعادن في عام 1398 هـ، بدأ المهندس محمد بن عبدالله القويحيس مسيرته المهنية كمهندس في المركز الصناعي للأبحاث والتطوير في
+                 المملكة العربية السعودية. وقد قدم خدمات استشارية خلال الفترة من 1398 هـ إلى 1402 هـ. ثم تولى منصب المدير العام للمشاريع والصيانة في وزارة الصحة خلال الفترة من 1402 هـ إلى 1418 هـ.
+                </p>
             <br />
             <br />
-            <p>في عام 1419هـ، شغل منصب مدير عام بمصلحة المياه والصرف الصحي، وفي نفس العام 
-                تولى أيضاً عضويةالعديد من اللجان والمجالس الإدارية، بما في ذلك لجنة المياه والإسكان 
-                والمرافق العامة واللجنة السعودية اليابانية المشتركة.</p>
+            <p>
+                في عام 1419 هـ، شغل منصب المدير العام للهيئة العامة للمياه والصرف الصحي، وفي نفس العام،
+                 عمل أيضًا عضوًا في عدة لجان ومجالس إدارية، بما في ذلك لجنة المياه والصرف الصحي ولجنة التعاون السعودي-الياباني.
+            </p>
         </div>
 
     </section>
     <aside class="up c2">
         <div class="s4">
-            <p>بعد ذلك، عمل المهندس القويحص كعضو في مجلس الشورى من 1422 هـ وحتى 1434 هـ. 
-                كما ترأس عدد من اللجان الخاصة وقدم عدد من المقترحات، مثل نظام هيئة الإسكان ونظام هيئة 
-                المنشئات الصغيرة والمتوسطة، ونظام توطين وظائف عقود الصيانة والتشغيل، ومقترح علاوة 
-                الإصدار، وكادر المهندسين وغيرها، بالإضافة لعدد من التوصيات الإضافية من خلال تقارير الجهات 
-                حكومية.  </p>
+            <p>
+                بعد ذلك، عمل المهندس القويحيس كعضو في مجلس الشورى من 1422 هـ إلى 1434 هـ. ترأس عدة لجان خاصة وقدم العديد من المقترحات، مثل نظام هيئة الإسكان ونظام الهيئة للمشروعات الصغيرة والمتوسطة،
+                 ونظام توطين وظائف عقود الصيانة والتشغيل، واقتراح علاوة إصدار، وكادر المهندسين، وغيرها، بالإضافة إلى عدة توصيات إضافية من خلال تقارير الجهات الحكومية.
+            </p>
         </div>
         <div class="s5">
-            <p>ثم تولى المهندس القويحص منصب أمين العاصمة المقدسة، حيث قام بتنفيذ ومتابعة عدة 
-                مشاريع ومبادرات تهدف إلى تطوير العاصمة المقدسة.
+            <p>
+                ثم تولى المهندس القويحيس منصب أمين العاصمة المقدسة، حيث أشرف على تنفيذ ومتابعة العديد من المشاريع والمبادرات التي تهدف إلى تطوير العاصمة المقدسة.
             </p>
         </div>
     </aside>
 
     <footer id="ContactUs">
-         <div class="footer-sections">
-            <section class="our-location">
-                <h4>موقعنا:</h4>
-                <div class="google-map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3625.793485095034!2d46.7283213!3d24.6652358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f06c85cc6489b%3A0x92372c3e432596d2!2z2KfZhNmC2YjZitit2LUg2YTZhNin2LPYqti02KfYsdin2Kog2KfZhNmH2YbYr9iz2YrYqQ!5e0!3m2!1sen!2ssa!4v1718911134872!5m2!1sen!2ssa" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </section>
-            <section class="office-info">
-                <h4>معلومات المكتب:</h4>
-                <ul class="contact-info">
-                    <li>
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:info@gec.com?subject=Contact" class="link">info@gec.sa </a> 
-                    </li>
-                    <li>
-                        <i class="fas fa-phone"></i>
-                        <h6>+966 11 20 333 43</h6>
-                    </li>
-                    <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"/></svg>
-                        <h6>7355 الرياض 12629، منطقة الملز </h6>
-                    </li>
-                </ul>
-            </section>
-            <section class="get-in-touch">
-                 <h4> رسائلنا الإخبارية: </h4>
-                 <div class="email-field">
-                     <input type="email" placeholder="Your Email" required>
-                     <input type="submit" value="Send" style="cursor: pointer;">
-                </div>
-                <div class="social-media-icons">
-                    <h6>وسائل التواصل الاجتماعي: </h6>
-                    <a href="#">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="#">
-                        <i class="fab fa-facebook"></i>
-                    </a>
-                </div>
-            </section>
-        </div>
+        <div class="footer-sections">
+           <section class="our-location">
+               <h4>موقعنا:</h4>
+               <div class="google-map">
+                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3625.793485095034!2d46.7283213!3d24.6652358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f06c85cc6489b%3A0x92372c3e432596d2!2z2KfZhNmC2YjZitit2LUg2YTZhNin2LPYqti02KfYsdin2Kog2KfZhNmH2YbYr9iz2YrYqQ!5e0!3m2!1sen!2ssa!4v1718911134872!5m2!1sen!2ssa" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+               </div>
+           </section>
+           <section class="office-info">
+               <h4>معلومات المكتب:</h4>
+               <ul class="contact-info">
+                   <li>
+                       <i class="fas fa-envelope"></i>
+                       <a href="mailto:info@gec.com?subject=Contact" class="link">info@gec.sa</a> 
+                   </li>
+                   <li>
+                       <i class="fas fa-phone"></i>
+                       <h6>+966 11 20 333 43</h6>
+                   </li>
+                   <li>
+                       <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"/></svg>
+                       <h6>7355 الرياض 12629، حي الملز</h6>
+                   </li>
+               </ul>
+           </section>
+           <section class="get-in-touch">
+                <h4>رسائلنا الإخبارية:</h4>
+                <div class="email-field">
+                    <input type="email" placeholder="Your Email" required>
+                    <input type="submit" value="Send" style="cursor: pointer;">
+               </div>
+               <div class="social-media-icons">
+                   <h6>وسائل التواصل الإجتماعي:</h6>
+                   <a href="#">
+                       <i class="fab fa-twitter"></i>
+                   </a>
+                   <a href="#">
+                       <i class="fab fa-linkedin"></i>
+                   </a>
+                   <a href="#">
+                       <i class="fab fa-facebook"></i>
+                   </a>
+               </div>
+           </section> 
+       </div>
 
-    </footer>
-    <div class="copyright-section">
-        <h2>حقوق الطبع والنشر من قبل <span>©</span> 2024 - GEC</h2>
+   </footer>
+   <div class="copyright-section">
+        <h2>Copyright By <span>©</span> GEC - 2024</h2>
     </div>
     <!-- Javascript Files -->
-     <script src="../js/menuBarEffect.js"></script>
-     <script src="../js/appearansEffect.js"></script>
+    <script src="../js/appearansEffect.js"></script>
+    <script src="../js/menuBarEffect.js"></script>
+    <script src="../js/loaderScript.js"></script>
 </body>
 </html>
