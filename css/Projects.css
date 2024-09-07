@@ -13,3 +13,9 @@
 .caption a:hover {
     text-decoration: underline;
 }
+
+@media (max-width: 600px) {
+    .projects-section .projects-container figure {
+        margin: 10px 0px;
+    }
+}

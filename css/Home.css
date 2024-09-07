@@ -186,6 +186,7 @@ img {
 }
 
 header {
+    font-family: 'gec-semiBold-font';
     position: relative;
     padding: 10px;
     margin: 0px 40px;
@@ -542,6 +543,7 @@ header nav ul li.projects-menu .sub-menu .projects-sub-menu::-webkit-scrollbar-t
 
 .landing-container h1 {
     font-size: 3vw;
+    font-family: 'gec-medium-font';
 }
 
 .landing-container h1.up {
@@ -551,6 +553,7 @@ header nav ul li.projects-menu .sub-menu .projects-sub-menu::-webkit-scrollbar-t
 .landing-container p {
     font-size: 40px;
     font-weight: bold;
+    font-family: 'gec-medium-font';
     width: 500px;
     line-height: 1.5;
     transform: translateY(200px);
@@ -1080,6 +1083,7 @@ header nav ul li.projects-menu .sub-menu .projects-sub-menu::-webkit-scrollbar-t
 
 .clients-section h1 {
     font-size: 40px;
+    font-family: 'gec-medium-font';
     color: var(--second-text-color);
     text-align: center;
     margin-bottom: 60px;
@@ -1168,6 +1172,7 @@ header nav ul li.projects-menu .sub-menu .projects-sub-menu::-webkit-scrollbar-t
 }
 
 .partners-section h1 {
+    font-family: 'gec-medium-font';
     font-size: 40px;
     text-align: center;
 }
@@ -1222,6 +1227,10 @@ footer .footer-sections {
     justify-content: space-between;
     color: var(--text-color);
     flex-wrap: wrap;
+}
+
+footer .footer-sections h4 {
+    font-family: 'gec-bold-font';
 }
 
 footer .footer-sections .our-location h4 {
@@ -1315,6 +1324,7 @@ footer .footer-sections .get-in-touch .email-field input[type="submit"]:hover {
 }
 
 footer .footer-sections .get-in-touch .social-media-icons h6 {
+    font-family: 'gec-semiBold-font';
     font-size: 20px;
     margin: 20px 0px;
 }

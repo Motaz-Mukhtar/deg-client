@@ -1,3 +1,13 @@
+/* Start Global Rules */
+h1 {
+    font-family: 'gec-medium-font';
+}
+
+h2, span {
+    font-family: 'gec-semiBold-font';
+}
+/* End Global Rules */
+
 .image-background-container::before{
     background-image: url(../assets/projects-images/pmo/develop-ten-hospitals.JPG);
     filter: blur(2px);
