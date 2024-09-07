@@ -543,7 +543,7 @@ header nav ul li.projects-menu .sub-menu .projects-sub-menu::-webkit-scrollbar-t
 
 .landing-container h1 {
     font-size: 3vw;
-    font-family: 'gec-medium-font';
+    font-family: 'gec-bold-font';
 }
 
 .landing-container h1.up {
@@ -722,6 +722,7 @@ header nav ul li.projects-menu .sub-menu .projects-sub-menu::-webkit-scrollbar-t
 }
 
 .strategic-section .article-container .title-container h1 {
+    font-family: 'gec-bold-font';
     position: relative;
     font-size: 45px;
     font-weight: bold;
