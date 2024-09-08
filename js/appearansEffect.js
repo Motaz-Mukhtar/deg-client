@@ -19,6 +19,7 @@ function containersAppear() {
 }
 
 window.addEventListener('load', () => {
+    containersAppear();
     if (window.innerWidth > 770) {
         document.querySelector('.load-container').style.cssText = `
             width: 50%;

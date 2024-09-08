@@ -6,6 +6,32 @@
     margin: 100px auto;
 }
 
+.filters {
+    width: fit-content;
+    margin: 0px auto;
+}
+
+.filters .filter {
+    display: inline-block;
+    margin: 0px 50px;
+}
+
+.filters .filter button {
+    font-size: 20px;
+    color: var(--text-color);
+    border-radius: 10px;
+}
+
+.filters .filter button:hover {
+    color: var(--main-color);
+}
+
+.filters .filter .filterSelected {
+    background-color: transparent;
+    color: var(--main-color);
+}
+
+
 .caption a {
     color: var(--text-color);
 }
@@ -14,8 +40,31 @@
     text-decoration: underline;
 }
 
+@media (max-width: 800px) {
+    .filters {
+        display: flex;
+    }
+}
+
+@media (max-width: 700px) {
+    .filters .filter {
+        margin: 0px 10px;
+    }
+}
+
 @media (max-width: 600px) {
     .projects-section .projects-container figure {
+        margin: 10px 0px;
+    }
+}
+
+@media (max-width: 550px) {
+    .filters {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filters .filter {
         margin: 10px 0px;
     }
 }
