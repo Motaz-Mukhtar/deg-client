@@ -419,10 +419,27 @@ header nav ul li.projects-menu .sub-menu .projects-sub-menu::-webkit-scrollbar-t
         color: var(--text-color);
     }
 
-    header nav ul li:not(:first-child) {
+    header nav ul li:not(:first-child){
         padding-bottom: 10px;
         border-right: none;
         border-bottom: 2px solid var(--text-color);
+    }
+
+    header nav ul li:last-child {
+        border-bottom: none;
+    }
+
+    header nav .lang-switch {
+        border-left: none;
+    }
+
+    header nav .lang-switch select {
+        color: var(--text-color);
+    }
+
+    header nav .lang-switch select option {
+        color: var(--main-color);
+        background-color: var(--text-color);
     }
 
     header nav ul li:not(:first-child) {
@@ -639,6 +656,7 @@ header nav ul li.projects-menu .sub-menu .projects-sub-menu::-webkit-scrollbar-t
     .landing-container h1,
     .landing-container p {
         width: 500px;
+        text-align: center;
     }
 
     .landing-container p {
