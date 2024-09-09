@@ -14,7 +14,7 @@ function filterProjects(service) {
             ele.style.display = 'none';
         }
         else {
-            ele.style.display = 'block'
+            ele.style.display = 'block';
         }
     });
 }

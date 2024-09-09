@@ -11,7 +11,8 @@
      <link rel="stylesheet" href="../css/Projects.css">
     <!-- Google Font (Main Font Style) -->
     <title>مشاريعنا | GEC </title>
-    <meta http-equiv="Content-Language" content="ar"></head>
+    <meta http-equiv="Content-Language" content="ar">
+</head>
 <body>
     <!-- Loader Container -->
     <div class="loader-container">
@@ -24,9 +25,9 @@
 
     <div class="image-background-container parent-container">
         <header>
-            <div class="logo">
-                <img src="../assets/main-logo.png" alt="Logo">
-            </div>
+            <a href="./Home.html" class="logo">
+                <img src="../assets/Logo-original.png" alt="Logo">
+            </a>
             <nav>
                 <div class="div">
                     <div class="menu-bar">
@@ -187,179 +188,193 @@
     </div>
 
     <!-- Projects Section -->
+    
     <section class="projects-section">
+        <div class="filters">
+            <a href="#studiesAndDesign" class="filter" data-service="studiesAndDesign">
+                <button>الدراسات و التصميم</button>
+            </a>
+            <a href="#pmo" class="filter" data-service="pmo">
+                <button>إدارة المشاريع</button>
+            </a>
+            <a href="#supervision" class="filter" data-service="supervision">
+                <button>الإشراف</button>
+            </a>
+        </div>
         <div class="projects-container">
-            <figure>
-                <img src="../assets/logo-with-dark-background.png" alt="logo-dark-background.png">
+            <figure data-service="pmo">
+                <img src="../assets/projects-images/pmo/develop-ten-hospitals.JPG" alt="develop-ten-hospitals.JPG">
                 <div class="caption">
                     <h3>تقديم خدمات إدارة المشاريع لـ 10 مستشفيات وأبراج طبية </h3>
-                    <span>تعلم المزيد  <i class="fa fa-arrow-left"></i></span>
+                    <span> <i class="fa fa-arrow-left"></i> معرفة المزيد  </span>
                 </div>
             </figure>
-            <figure>
-                <img src="../assets/logo-with-dark-background.png" alt="logo-dark-background.png">
+            <figure data-service="studiesAndDesign">
+                <img src="../assets/logo-with-white-background.png" alt="logo-dark-background.png">
                 <div class="caption">
                     <h3>مشروع لمسح ودراسة الوضع الحالي لأعمال التشغيل والصيانة في المرافق الحكومية </h3>
-                    <span>تعلم المزيد  <i class="fa fa-arrow-left"></i></span>
+                    <span> <i class="fa fa-arrow-left"></i> معرفة المزيد  </span>
                 </div>
             </figure>
-            <figure>
-                <img src="../assets/logo-with-dark-background.png" alt="logo-dark-background.png">
+            <figure data-service="supervision">
+                <!-- Not Provided Yet -->
+                <img src="../assets/logo-with-white-background.png" alt="logo-dark-background.png">
                 <div class="caption">
                     <h3>مبادرة تطوير غرف العناية المركزة والطوارئ </h3>
-                    <span>تعلم المزيد  <i class="fa fa-arrow-left"></i></span>
+                    <span> <i class="fa fa-arrow-left"></i> معرفة المزيد  </span>
                 </div>
             </figure>
 
-            <figure>
-                <img src="../assets/logo-with-dark-background.png" alt="logo-dark-background.png">
+            <figure data-service="supervision">
+                <img src="../assets/projects-images/supervision/44-hospitals-1.jpg" alt="develop-emergancy-rooms.JPG">
                 <div class="caption">
                     <h3>الإشراف على المراكز الصحية: 44 مركز </h3>
-                    <span>تعلم المزيد  <i class="fa fa-arrow-left"></i></span>
+                    <span> <i class="fa fa-arrow-left"></i> معرفة المزيد  </span>
                 </div>
             </figure>
-            <figure>
-                <img src="../assets/logo-with-dark-background.png" alt="logo-dark-background.png">
+            <figure data-service="supervision">
+                <img src="../assets/projects-images/supervision/asir-region-1.JPG" alt="develop-emergancy-rooms.JPG">
                 <div class="caption">
                     <h3>الإشراف على تنفيذ مشروع المراكز الصحية في منطقة عسير </h3>
-                    <span>تعلم المزيد  <i class="fa fa-arrow-left"></i></span>
+                    <span> <i class="fa fa-arrow-left"></i> معرفة المزيد  </span>
                 </div>
             </figure>
-            <figure>
-                <img src="../assets/logo-with-dark-background.png" alt="logo-dark-background.png">
+            <figure data-service="studiesAndDesign">
+                <img src="../assets/logo-with-white-background.png" alt="logo-dark-background.png">
                 <div class="caption">
                     <h3>تصميم وإعداد وثائق المنافسة لمشروع بناء مراكز الطب الشرعي </h3>
-                    <span>تعلم المزيد  <i class="fa fa-arrow-left"></i></span>
+                    <span> <i class="fa fa-arrow-left"></i> معرفة المزيد  </span>
                 </div>
             </figure>
 
-            <figure>
-                <img src="../assets/logo-with-dark-background.png" alt="logo-dark-background.png">
+            <figure data-service="studiesAndDesign">
+                <img src="../assets/logo-with-white-background.png" alt="logo-dark-background.png">
                 <div class="caption">
                     <h3>تصميم وإعداد وثائق المنافسة لمشروع المراكز الصحية والمرافق السكنية </h3>
-                    <span>تعلم المزيد  <i class="fa fa-arrow-left"></i></span>
+                    <span> <i class="fa fa-arrow-left"></i> معرفة المزيد  </span>
                 </div>
             </figure>
-            <figure>
-                <img src="../assets/logo-with-dark-background.png" alt="logo-dark-background.png">
+            <figure data-service="supervision">
+                <img src="../assets/projects-images/supervision/small-stations-1.jpg" alt="small-stations-1">
                 <div class="caption">
                     <h3>الإشراف على مشروع إنشاء مجمعات سكنية في المحيطات الصغيرة (حق - دوبا - الوجة) </h3>
-                    <span>تعلم المزيد  <i class="fa fa-arrow-left"></i></span>
+                    <span> <i class="fa fa-arrow-left"></i> معرفة المزيد  </span>
                 </div>
             </figure>
-            <figure>
-                <img src="../assets/logo-with-dark-background.png" alt="logo-dark-background.png">
+            <figure data-service="supervision">
+                <!-- Not Provided Yet -->
+                <img src="../assets/logo-with-white-background.png" alt="logo-dark-background.png">
                 <div class="caption">
                     <h3>الإشراف على مشروع تنفيذ شبكة المياه الداخلية لقرية مستورة، العقد (12-B) </h3>
-                    <span>تعلم المزيد  <i class="fa fa-arrow-left"></i></span>
+                    <span> <i class="fa fa-arrow-left"></i> معرفة المزيد  </span>
                 </div>
             </figure>
-            <figure>
-                <img src="../assets/logo-with-dark-background.png" alt="logo-dark-background.png">
+            <figure data-service="supervision">
+                <img src="../assets/logo-with-white-background.png" alt="logo-dark-background.png">
                 <div class="caption">
                     <h3>تقديم الخدمات الهندسية والاستشارية لمنطقة عسير </h3>
-                    <span>تعلم المزيد  <i class="fa fa-arrow-left"></i></span>
+                    <span> <i class="fa fa-arrow-left"></i> معرفة المزيد  </span>
                 </div>
             </figure>
-            <figure>
-                <img src="../assets/logo-with-dark-background.png" alt="logo-dark-background.png">
+            <figure data-service="studiesAndDesign">
+                <img src="../assets/logo-with-white-background.png" alt="logo-dark-background.png">
                 <div class="caption">
                     <h3>معالجة مناطق الحشود في منطقة المسجد الكبير والطرق والممرات المرتبطة بالمقدسات </h3>
-                    <span>تعلم المزيد  <i class="fa fa-arrow-left"></i></span>
+                    <span> <i class="fa fa-arrow-left"></i> معرفة المزيد  </span>
                 </div>
             </figure>
-            <figure>
-                <img src="../assets/logo-with-dark-background.png" alt="logo-dark-background.png">
+            <figure data-service="supervision">
+                <img src="../assets/logo-with-white-background.png" alt="logo-dark-background.png">
                 <div class="caption">
                     <h3>الإشراف على مشروع شبكات مياه الشرب الداخلية لقرية هالي بخزان عالي السعة يبلغ 1000 م3 </h3>
-                    <span>تعلم المزيد  <i class="fa fa-arrow-left"></i></span>
+                    <span> <i class="fa fa-arrow-left"></i> معرفة المزيد  </span>
                 </div>
             </figure>
 
-            <figure>
-                <img src="../assets/logo-with-dark-background.png" alt="logo-dark-background.png">
+            <figure data-service="supervision">
+                <img src="../assets/logo-with-white-background.png" alt="logo-dark-background.png">
                 <div class="caption">
                     <h3>الإشراف على تنفيذ شبكات المياه الداخلية في مدينة القوز في القنفودة بمنطقة مكة المكرمة </h3>
-                    <span>تعلم المزيد  <i class="fa fa-arrow-left"></i></span>
+                    <span> <i class="fa fa-arrow-left"></i> معرفة المزيد  </span>
                 </div>
             </figure>
-            <figure>
-                <img src="../assets/logo-with-dark-background.png" alt="logo-dark-background.png">
+            <figure data-service="studiesAndDesign">
+                <img src="../assets/logo-with-white-background.png" alt="logo-dark-background.png">
                 <div class="caption">
                     <h3>الإشراف على مشروع تنفيذ دبابة أرضية في مدينة خرمة بسعة 10,000 م3 </h3>
-                    <span>تعلم المزيد  <i class="fa fa-arrow-left"></i></span>
+                    <span> <i class="fa fa-arrow-left"></i> معرفة المزيد  </span>
                 </div>
             </figure>
-            <figure>
-                <img src="../assets/logo-with-dark-background.png" alt="logo-dark-background.png">
+            <figure data-service="studiesAndDesign">
+                <img src="../assets/logo-with-white-background.png" alt="logo-dark-background.png">
                 <div class="caption">
                     <h3>تصميم الساحة الجديدة والمدخل الجديد، الذي يغطي واجهات مواقف السيارات لمدينة الملك فهد الطبية في الرياض </h3>
-                    <span>تعلم المزيد  <i class="fa fa-arrow-left"></i></span>
+                    <span> <i class="fa fa-arrow-left"></i> معرفة المزيد  </span>
                 </div>
             </figure>
 
 
-            <figure>
-                <img src="../assets/logo-with-dark-background.png" alt="logo-dark-background.png">
+            <figure data-service="studiesAndDesign">
+                <img src="../assets/logo-with-white-background.png" alt="logo-dark-background.png">
                 <div class="caption">
                     <h3>مشروع خدمات التصميم لمستشفى الملك فيصل التخصصي ومركز الأبحاث مع معايير إمكانية الوصول (APD) </h3>
-                    <span>تعلم المزيد  <i class="fa fa-arrow-left"></i></span>
+                    <span> <i class="fa fa-arrow-left"></i> معرفة المزيد  </span>
                 </div>
             </figure>
-            <figure>
-                <img src="../assets/logo-with-dark-background.png" alt="logo-dark-background.png">
+            <figure data-service="studiesAndDesign"> <!-- Not Provided Yet -->
+                <img src="../assets/logo-with-white-background.png" alt="logo-dark-background.png">
                 <div class="caption">
                     <h3>اتفاق إطاري لخدمات التصميم والدراسات </h3>
-                    <span>تعلم المزيد  <i class="fa fa-arrow-left"></i></span>
+                    <span> <i class="fa fa-arrow-left"></i> معرفة المزيد  </span>
                 </div>
             </figure>
-            <figure>
-                <img src="../assets/logo-with-dark-background.png" alt="logo-dark-background.png">
+            <figure data-service="studiesAndDesign">
+                <img src="../assets/logo-with-white-background.png" alt="logo-dark-background.png">
                 <div class="caption">
-                    <h3>عقد التصميم والإشراف على مبنى عيادة مستشفى الحقيق </h3>
-                    <span>تعلم المزيد  <i class="fa fa-arrow-left"></i></span>
+                    <h3>عقد التصميم والإشراف على مبنى عيادة مستشفى الحريق </h3>
+                    <span> <i class="fa fa-arrow-left"></i> معرفة المزيد  </span>
                 </div>
             </figure>
-            <figure>
-                <img src="../assets/logo-with-dark-background.png" alt="logo-dark-background.png">
-                <div class="caption">
-                    <h3>تصميم والإشراف على فيلا سكنية </h3>
-                    <span>تعلم المزيد  <i class="fa fa-arrow-left"></i></span>
-                </div>
-            </figure>
-            <figure>
-                <img src="../assets/logo-with-dark-background.png" alt="logo-dark-background.png">
+            <figure data-service="studiesAndDesign"> <!-- Not Provided Yet-->
+                <img src="../assets/logo-with-white-background.png" alt="logo-dark-background.png">
                 <div class="caption">
                     <h3>تصميم والإشراف على فيلا سكنية </h3>
-                    <span>تعلم المزيد  <i class="fa fa-arrow-left"></i></span>
+                    <span> <i class="fa fa-arrow-left"></i> معرفة المزيد  </span>
                 </div>
             </figure>
-            <figure>
-                <img src="../assets/logo-with-dark-background.png" alt="logo-dark-background.png">
+            <figure data-service="studiesAndDesign"> <!-- Not Provided Yet-->
+                <img src="../assets/logo-with-white-background.png" alt="logo-dark-background.png">
                 <div class="caption">
                     <h3>تصميم والإشراف على فيلا سكنية </h3>
-                    <span>تعلم المزيد  <i class="fa fa-arrow-left"></i></span>
+                    <span> <i class="fa fa-arrow-left"></i> معرفة المزيد  </span>
                 </div>
             </figure>
-            <figure>
-                <img src="../assets/logo-with-dark-background.png" alt="logo-dark-background.png">
+            <figure data-service="studiesAndDesign"> <!-- Not Provided Yet-->
+                <img src="../assets/logo-with-white-background.png" alt="logo-dark-background.png">
                 <div class="caption">
                     <h3>تصميم والإشراف على فيلا سكنية </h3>
-                    <span>تعلم المزيد  <i class="fa fa-arrow-left"></i></span>
+                    <span> <i class="fa fa-arrow-left"></i> معرفة المزيد  </span>
                 </div>
             </figure>
-            <figure>
-                <img src="../assets/logo-with-dark-background.png" alt="logo-dark-background.png">
+            <figure data-service="studiesAndDesign"> <!-- Not Provided Yet-->
+                <img src="../assets/logo-with-white-background.png" alt="logo-dark-background.png">
+                <div class="caption">
+                    <h3>تصميم والإشراف على فيلا سكنية </h3>
+                    <span> <i class="fa fa-arrow-left"></i> معرفة المزيد  </span>
+                </div>
+            </figure>
+            <figure data-service="studiesAndDesign"> <!-- Not Provided Yet-->
+                <img src="../assets/logo-with-white-background.png" alt="logo-dark-background.png">
                 <div class="caption">
                     <h3>مجمع تجاري (1000 م2) </h3>
-                    <span>تعلم المزيد  <i class="fa fa-arrow-left"></i></span>
+                    <span> <i class="fa fa-arrow-left"></i> معرفة المزيد  </span>
                 </div>
             </figure>
-            <figure>
-                <img src="../assets/logo-with-dark-background.png" alt="logo-dark-background.png">
+            <figure data-service="studiesAndDesign"> <!-- Not Provided Yet-->
+                <img src="../assets/logo-with-white-background.png" alt="logo-dark-background.png">
                 <div class="caption">
                     <h3>تصميم والإشراف على فيلا سكنية </h3>
-                    <span>تعلم المزيد  <i class="fa fa-arrow-left"></i></span>
+                    <span> <i class="fa fa-arrow-left"></i> معرفة المزيد  </span>
                 </div>
             </figure>
         </div>
@@ -397,18 +412,24 @@
                     <input type="submit" value="Send" style="cursor: pointer;">
                </div>
                <div class="social-media-icons">
-                   <h6>وسائل التواصل الإجتماعي:</h6>
-                   <a href="#">
-                       <i class="fab fa-twitter"></i>
-                   </a>
-                   <a href="#">
-                       <i class="fab fa-linkedin"></i>
-                   </a>
-                   <a href="#">
+                <h6>وسائل التواصل الإجتماعي:</h6>
+                <a href="https://x.com/Alguwaihes_BD" title="Twitter" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/al-guwaihes-engineering-consultancy/posts/?feedView=all" title="Linkedin" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.instagram.com/guwaihes.eng?utm_source=qr&igsh=anQ2bmNkd3ZsZjNk" title="Instagram" target="_blank">
                     <i class="fab fa-instagram"></i>
                 </a>
-               </div>
-           </section> 
+                <a href="https://t.me/+966539840051" title="Telegram" target="_blank">
+                    <i class="fab fa-telegram-plane"></i>
+                </a>
+                <a href="https://www.snapchat.com/add/guwaiheseng?share_id=2nLajYYs37s&locale=en-US" title="Snapchat" target="_blank">
+                    <i class="fab fa-snapchat-ghost"></i>
+                </a>
+            </div>
+       </section> 
        </div>
 
    </footer>
@@ -420,5 +441,6 @@
     <script src="../js/menuBarEffect.js"></script>
     <script src="../js/appearansEffect.js"></script>
     <script src="../js/loaderScript.js"></script>
+    <script src="../js/filterProjects.js"></script>
 </body>
 </html>
