@@ -236,6 +236,29 @@ header nav ul > li {
     padding: 15px 30px;
 }
 
+header nav .lang-switch {
+    padding: 0px 5px;
+    border-left: 3px solid var(--main-color);
+    margin: auto;
+}
+
+header nav .lang-switch select {
+    font-size: 18px;
+    border: 0px;
+    color: var(--main-color);
+    outline-color: var(--main-color);
+    user-select: none;
+    background-color: transparent;
+    font-family: "gec-semiBold-font";
+    cursor: pointer;
+}
+
+header nav .lang-switch select option {
+    color: var(--text-color);
+    background-color: var(--main-color);
+    padding: 10px;
+}
+
 header nav ul li.menu {
     z-index: 3;
 }
