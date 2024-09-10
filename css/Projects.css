@@ -17,6 +17,7 @@
 }
 
 .filters .filter button {
+    font-family: 'gec-medium-font';
     font-size: 20px;
     color: var(--text-color);
     border-radius: 10px;
