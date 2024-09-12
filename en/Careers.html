@@ -215,7 +215,7 @@
             <label for="attachment">Your CV / Resume</label>
             <input type="file" id="attachment" name="attachment" required>
 
-            <input type="submit" value="send">
+            <input type="submit" value="send" onclick="sendEmail()">
         </div>
         <div class="image-container"> 
             <img src="../assets/Join-us-image.png" alt="">
@@ -282,5 +282,7 @@
     <script src="../js/appearansEffect.js"></script>
     <script src="../js/loaderScript.js"></script>
     <script src="../js/langSwitch.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="../js/emailSendingScript.js"></script>
 </body>
 </html>
