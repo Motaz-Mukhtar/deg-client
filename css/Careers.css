@@ -32,6 +32,7 @@
 .join-us-section .user-form input {
     padding: 8px 5px;
     outline-color: var(--main-color);
+    font-size: 20px;
 }
 
 .join-us-section .user-form textarea {

@@ -603,7 +603,7 @@ header nav ul li.projects-menu .sub-menu .projects-sub-menu::-webkit-scrollbar-t
     position: absolute;
     right: 50%;
     font-weight: 900;
-    font-size: 25px;
+    font-size: 40px;
     margin-top: 0px;
     animation-name: scroll-animation;
     animation-duration: 1s;
