@@ -39,6 +39,12 @@
     font-size: 17px;
 }
 
+.who-we-are-section p::first-letter,
+.brief-section p::first-letter,
+aside::first-letter {
+    font-weight: 900;
+}
+
 .who-we-are-section .s2 {
     display: flex;
     align-items: center;
