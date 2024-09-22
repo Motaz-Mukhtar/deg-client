@@ -1376,6 +1376,13 @@ footer .footer-sections .get-in-touch .email-field input[type="submit"]:hover {
     color: white;
 }
 
+footer .footer-sections .get-in-touch .social-media-icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+
 footer .footer-sections .get-in-touch .social-media-icons h6 {
     font-family: 'gec-semiBold-font';
     font-size: 20px;
@@ -1383,7 +1390,7 @@ footer .footer-sections .get-in-touch .social-media-icons h6 {
 }
 
 footer .footer-sections .get-in-touch .social-media-icons a {
-    font-size: 30px;
+    font-size: 50px;
     margin: 0px 10px;
     color: var(--main-color);
 }
