@@ -230,10 +230,11 @@ header nav ul li.menu-close {
 
 header nav ul li > a {
     color: var(--second-main-color);
+    font-size: 18px;
 }
 
 header nav ul > li {
-    padding: 15px 30px;
+    padding: 15px;
 }
 
 header nav .lang-switch {
@@ -452,9 +453,9 @@ header nav ul li.projects-menu .sub-menu .projects-sub-menu::-webkit-scrollbar-t
     }
 
     header nav ul li.menu-close {
-        display: block;
+        display: flex;
         position: relative;
-        right: -350px;
+        justify-content: left;
     }
 
     header nav .menu-bar {
@@ -554,6 +555,11 @@ header nav ul li.projects-menu .sub-menu .projects-sub-menu::-webkit-scrollbar-t
     header nav ul li.menu .sub-menu li:hover a {
         color: var(--text-color);
         background-color: transparent;
+    }
+
+    header nav .lang-switch {
+        display: flex;
+        justify-content: center;
     }
 }
 
@@ -1182,6 +1188,11 @@ header nav ul li.projects-menu .sub-menu .projects-sub-menu::-webkit-scrollbar-t
     margin: 0px 100px;
 }
 
+/* Resize the incompatible images */
+.clients-section .slider-track img.resize {
+    width: 300px;
+}
+
 .clients-section .slider-track img.small-image {
     width: 350px;
 }
@@ -1380,6 +1391,24 @@ footer .footer-sections .get-in-touch .social-media-icons a {
 footer .footer-sections .get-in-touch .social-media-icons a:hover {
     transition: 0.5s;
     color: white;
+}
+
+/* background: -webkit-gradient(linear, left top, left bottom, from(#f00), to(#333));
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent; */
+footer .footer-sections .get-in-touch .social-media-icons a.linkedin:hover {
+    color: #0077B5;
+}
+
+footer .footer-sections .get-in-touch .social-media-icons a.instagram:hover {
+}
+
+footer .footer-sections .get-in-touch .social-media-icons a.snapchat:hover {
+    color: #fffc00;
+}
+
+footer .footer-sections .get-in-touch .social-media-icons a.telegram:hover {
+    color: #0088cc;
 }
 
 .copyright-section {

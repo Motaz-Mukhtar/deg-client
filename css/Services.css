@@ -28,17 +28,13 @@
     display: flex;
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    width: fit-content;
     padding: 40px 50px;
     margin: 20px;
     border-radius: 5px;
 }
 
-.services .service:hover {
-}
-
-.services .service .description {
-
+.services .PMO-Supervision-container {
+    margin: auto 0px;
 }
 
 .services .service .description h2 {
