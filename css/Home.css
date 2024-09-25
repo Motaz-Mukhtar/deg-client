@@ -649,10 +649,10 @@ header nav ul li.projects-menu .sub-menu .projects-sub-menu::-webkit-scrollbar-t
     }
 }
 
-@media (max-width: 770px) {
+@media (max-width: 720px) {
     .load-container {
         width: 100%;
-        height: 50%;
+        height: 60%;
     }
 
     .landing-container {
@@ -683,7 +683,7 @@ header nav ul li.projects-menu .sub-menu .projects-sub-menu::-webkit-scrollbar-t
 
     .landing-container p {
         width: 400px;
-        font-size: 15px;
+        font-size: 18px;
     }
 }
 
@@ -716,6 +716,10 @@ header nav ul li.projects-menu .sub-menu .projects-sub-menu::-webkit-scrollbar-t
 
     .landing-container .landing-scroll {
         bottom: 50px;
+    }
+
+    .image-background-container::before {
+        background-position: top;
     }
 }
 
