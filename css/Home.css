@@ -519,7 +519,7 @@ header nav ul li.projects-menu .sub-menu .projects-sub-menu::-webkit-scrollbar-t
         content: '\f054';
         position: absolute;
         color: #8f8f8f;
-        right: 0px;
+        right: -25px;
         top: 0px;
         transition: 0.5s;
     }
