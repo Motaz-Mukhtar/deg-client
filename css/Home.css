@@ -42,6 +42,7 @@
     padding: 0px;
     margin: 0px;
     transition: 0.5s;
+    -webkit-transition: 0.5s;
 }
 
 /* width */
@@ -131,16 +132,20 @@ img {
     margin: 0px 10px;
     z-index: 1;
     animation: bounce 0.9s ease-out infinite;
+    -webkit-animation: bounce 0.9s ease-out infinite;
     animation-direction: alternate;            
+    -webkit-animation-direction: alternate;            
     user-select: none;
 }
 
 .loader-container img:nth-child(2) {
     animation-delay: .3s;
+    -webkit-animation-delay: .3s;
 }
 
 .loader-container img:nth-child(3) {
     animation-delay: .6s;
+    -webkit-animation-delay: .6s;
 }
 
 /* Animation Keyframes */
@@ -181,6 +186,7 @@ img {
     z-index: -1;
     background-image: url(../assets/home-page-images/landing-page-background-image.jpg);
     background-size: cover;
+    -webkit-background-size: cover;
     background-attachment: fixed;
     filter: brightness(0.8);
 }
@@ -270,6 +276,7 @@ header nav ul li.menu .sub-menu {
     position: absolute;
     background-color: var(--background-color);
     transition: 0.3s;
+    -webkit-transition: 0.3s;
 }
 
 header nav ul li.menu .sub-menu li a {
@@ -487,6 +494,7 @@ header nav ul li.projects-menu .sub-menu .projects-sub-menu::-webkit-scrollbar-t
         right: 200px;
         top: 0px;
         transition: 0.5s;
+        -webkit-transition: 0.5s;
     }
 
    header nav ul li.menu .sub-menu {
@@ -522,6 +530,7 @@ header nav ul li.projects-menu .sub-menu .projects-sub-menu::-webkit-scrollbar-t
         right: -25px;
         top: 0px;
         transition: 0.5s;
+        -webkit-transition: 0.5s;
     }
 
     header nav ul li.menu li.sub-sub-menu:hover::after {
@@ -612,9 +621,13 @@ header nav ul li.projects-menu .sub-menu .projects-sub-menu::-webkit-scrollbar-t
     font-size: 40px;
     margin-top: 0px;
     animation-name: scroll-animation;
+    -webkit-animation-name: scroll-animation;
     animation-duration: 1s;
+    -webkit-animation-duration: 1s;
     animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
+    -webkit-animation-timing-function: ease-in-out;
     cursor: pointer;
     bottom: 6%;
 }
@@ -783,6 +796,7 @@ header nav ul li.projects-menu .sub-menu .projects-sub-menu::-webkit-scrollbar-t
 .strategic-section .article-container:nth-child(2):hover h1::before {
     left: -80px;
     transition: 1s;
+    -webkit-transition: 1s;
 }
 
 .strategic-section .article-container:nth-child(2) ul {
@@ -1035,6 +1049,7 @@ header nav ul li.projects-menu .sub-menu .projects-sub-menu::-webkit-scrollbar-t
     width: 400px;
     height: 250px;
     transition: 0.3s;
+    -webkit-transition: 0.3s;
 }
 
 .projects-section .projects-container figure:hover img {
@@ -1053,6 +1068,7 @@ header nav ul li.projects-menu .sub-menu .projects-sub-menu::-webkit-scrollbar-t
     color: white;
     width: 100%;
     transition: 0.3s;
+    -webkit-transition: 0.3s;
     top: 50px;
     bottom: 0px;
     opacity: 0;
@@ -1184,6 +1200,7 @@ header nav ul li.projects-menu .sub-menu .projects-sub-menu::-webkit-scrollbar-t
 .clients-section  .slider-track {
     display: inline-block;
     animation: 35s slide infinite linear;
+    -webkit-animation: 35s slide infinite linear;
 }
 
 .clients-section .slider-track img {
@@ -1401,6 +1418,7 @@ footer .footer-sections .get-in-touch .social-media-icons a {
 
 footer .footer-sections .get-in-touch .social-media-icons a:hover {
     transition: 0.5s;
+    -webkit-transition: 0.5s;
     color: white;
 }
 
