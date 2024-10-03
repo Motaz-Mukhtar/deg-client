@@ -114,8 +114,7 @@ aside::first-letter {
 .brief-section {
     display: flex;
     align-items: center;
-    margin: 0px 80px;
-    margin-bottom: 10px;
+    margin: 40px 80px;
 }
 
 .brief-section .s3 h1 {
@@ -123,15 +122,16 @@ aside::first-letter {
     margin-bottom: 20px;
     border-bottom: 3px solid var(--main-color);
     padding-bottom: 5px;
-    font-size: 30px;
+    font-size: 29px;
 }
 
 .brief-section .s3 img {
-    width: 250px;
+    width: 350px;
     border-radius: 10px;
 }
-.brief-section .s3 {
-
+.brief-section .text-container span {
+    font-weight: 900;
+    font-size: 20px;
 }
 
 .brief-section p {
@@ -157,6 +157,12 @@ aside.c2 .s5 {
 @media (max-width: 1000px) {
     .brief-section {
         margin: 40px 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .brief-section .text-container {
+        margin-top: 30px;
     }
 }
 

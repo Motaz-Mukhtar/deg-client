@@ -12,7 +12,7 @@
 }
 
 .filters .filter {
-    display: inline-block;
+    display: none;
     margin: 0px 50px;
 }
 
@@ -27,9 +27,11 @@
     color: var(--main-color);
 }
 
-.filters .filter .filterSelected {
+.filters .filterSelected {
+    display: inline-block;
     background-color: transparent;
     color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
 }
 
 

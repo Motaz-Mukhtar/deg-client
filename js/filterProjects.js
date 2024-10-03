@@ -25,27 +25,30 @@ function filterButtons (service) {
     if (service) {
 
         filters.forEach(ele => {
+
+            console.log(ele);
             console.log(service)
+            console.log(ele.dataset.service)
             if (ele.dataset.service === service) {
-                ele.childNodes[1].classList.add('filterSelected');
+                ele.classList.add('filterSelected');
                 filterProjects(ele.hash);
             }
         })
 
     }
 
-    filters.forEach(ele => {
-        ele.addEventListener('click', () => {
-            filters.forEach(ele => {
-                // Remove class from all elements.
-                ele.childNodes[1].classList.remove('filterSelected');
-            });
+    // filters.forEach(ele => {
+    //     ele.addEventListener('click', () => {
+    //         filters.forEach(ele => {
+    //             // Remove class from all elements.
+    //             ele.childNodes[1].classList.remove('filterSelected');
+    //         });
 
-            // Add class to current element.
-            ele.childNodes[1].classList.add('filterSelected');
-            filterProjects(ele.hash);
-        });
-    });
+    //         // Add class to current element.
+    //         ele.childNodes[1].classList.add('filterSelected');
+    //         filterProjects(ele.hash);
+    //     });
+    // });
 }
 
 
