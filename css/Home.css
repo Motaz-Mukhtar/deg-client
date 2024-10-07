@@ -1399,7 +1399,7 @@ footer .footer-sections .get-in-touch .email-field input[type="submit"]:hover {
 
 footer .footer-sections .get-in-touch .social-media-icons {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     text-align: center;
 }
@@ -1440,6 +1440,14 @@ footer .footer-sections .get-in-touch .social-media-icons a.telegram:hover {
     color: #0088cc;
 }
 
+footer .footer-sections .get-in-touch .social-media-icons a.facebook:hover {
+    color: #1877F2;
+}
+
+footer .footer-sections .get-in-touch .social-media-icons a.whatsapp:hover {
+    color: #00FF00;
+}
+
 .copyright-section {
     padding: 20px 0px;
     border-top: 3px solid var(--main-color);
@@ -1465,10 +1473,9 @@ footer .footer-sections .get-in-touch .social-media-icons a.telegram:hover {
 @media (max-width: 800px) {
     footer .footer-sections section {
         margin: 20px 0px;
+        text-align: center;
     }
-}
 
-@media (max-width: 700px) {
     footer .footer-sections {
         justify-content: center;
         gap: 25px;
@@ -1478,6 +1485,10 @@ footer .footer-sections .get-in-touch .social-media-icons a.telegram:hover {
 @media (max-width: 400px) {
     footer .footer-sections .office-info .contact-info li  {
         flex-wrap: nowrap;
+    }
+
+    footer .footer-sections .get-in-touch .social-media-icons {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 /* End Footer Section */
