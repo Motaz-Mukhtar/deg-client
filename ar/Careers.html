@@ -32,6 +32,13 @@
     footer h4 {
         direction: rtl;
     }
+
+    @media (max-width: 800px) {
+        .work-environment-section .work-features {
+            display: grid;
+            grid-template-columns: repeat(1, auto);
+        }
+    }
 </style>
 <body>
     <!-- Loader Container -->
@@ -212,26 +219,41 @@
     </div>
 
     <!-- Careers -->
-    <section class="join-us-section">
+    <section class="work-environment-section" style="direction: rtl;">
+        <h2 class="up">لماذا نحن ؟</h2>
+        <p class="work-environment up">
+            في شركة <span>GEC</span>، نحرص على توفير بيئة عمل ديناميكية وتعاونية حيث يتم تقدير إسهاماتك. نحن نؤمن بالابتكار والعمل الجماعي والنمو المستمر، ونوفر لك الأدوات والفرص لتطوير مسيرتك المهنية.        </p>
+        <ul class="work-features up">
+            <li><strong>مشاريع مبتكرة:</strong> كن جزءًا من مشاريع هندسية رائدة تحدث تأثيرًا كبيرًا.</li>
+            <li><strong>التعاون بين الفريق:</strong> اعمل جنبًا إلى جنب مع فريق من الخبراء الشغوفين بما يقومون به.</li>
+            <!-- <li><strong>Professional Growth:</strong> Access training programs and resources that support your professional journey.</li> -->
+            <li><strong>التوازن بين العمل والحياة:</strong> نحن نقدر وقتك الشخصي ونوفر جداول مرنة لتعزيز التوازن.</li>
+            <li><strong>ثقافة شاملة:</strong> فريقنا يزدهر بفضل التنوع والشمولية، مما يخلق بيئة ترحيبية للجميع.</li>
+        </ul>
+        <p class="cta-text up">
+            هل أنت مستعد لإحداث فرق؟ انضم إلينا في <span>GEC</span> وكن جزءًا من مستقبل حيث تشكل مهاراتك وأفكارك العالم!
+        </p>
+    </section>
+    <section class="join-us-section up">
         <div class="user-form">
             
             <label for="first-name">الاسم الأول:</label>
-            <input type="text" id="first-name" name="first-name" placeholder="الاسم الأول" required>
+            <input type="text" id="first-name" name="first-name" placeholder="الاسم الأول" required aria-label="الاسم الأول">
             
             <label for="last-name">اسم العائلة:</label>
-            <input type="text" id="last-name" name="last-name" placeholder="اسم العائلة" required>
+            <input type="text" id="last-name" name="last-name" placeholder="اسم العائلة" required aria-label="اسم العائلة">
             
             <label for="mobile-number">رقم الهاتف:</label>
-            <input type="text" id="mobile-number" name="mobile-number" placeholder="رقم الهاتف" required>
+            <input type="text" id="mobile-number" name="mobile-number" placeholder="رقم الهاتف" required aria-label="رقم الهاتف">
 
             <label for="user-email">البريد الاكتروني:</label>
-            <input type="email" id="user-email" name="email" placeholder="البريد الاكتروني" required>
+            <input type="email" id="user-email" name="email" placeholder="البريد الاكتروني" required aria-label="البريد الاكتروني">
 
             <label for="user-message">رسالتك:</label>
-            <textarea id="user-message" name="user-message" placeholder="رسالتك" required ></textarea>
+            <textarea id="user-message" name="user-message" placeholder="رسالتك" required aria-label="رسالتك"></textarea>
 
             <label for="attachment">السيرة الذاتية:</label>
-            <input type="file" id="attachment" name="attachment" required>
+            <input type="file" id="attachment" name="attachment" required aria-label="السيرة الذاتية">
 
             <input type="submit" value="إرسال">
         </div>
@@ -253,16 +275,12 @@
                    </li>
                    <li>
                        <i class="fas fa-phone"></i>
-                       <h6>+966 11 20 333 43</h6>
-                   </li>
+                       <h6>+966 11 20 333 43, <div><img src="/assets/fax-icon.svg" alt="Fax-icon"></div> +966 11 20 333 53</h6>
+                    </li>
                    <li>
                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"/></svg>
                        <h6>7355 الرياض 12629، حي الملز</h6>
                    </li>
-                   <li>
-                        <i class="fa-solid fa-info" style="padding: 10px 16px;"></i>
-                        <h6>FAX : 0112033353, ص ب 27197</h6>
-                    </li>
                </ul>
            </section>
            <section class="get-in-touch">

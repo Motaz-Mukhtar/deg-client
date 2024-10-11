@@ -1,7 +1,7 @@
 /* Start Variables */
 :root {
     /* background-color: #f6f6f6 !important Gray */
-    /* --main-color: #c9a22e;   */
+    --third-main-color: #c9a22e;  
     --main-color: #2A2B2F;
     --second-main-color: #000;
     /* --second-main-color: #89772e; */
@@ -466,12 +466,12 @@ header nav ul li.projects-menu .sub-menu .projects-sub-menu::-webkit-scrollbar-t
     }
 
     header nav .menu-bar {
-        display: block;
+        display: flex;
         font-size: 40px;
         cursor: pointer;
         background-color: var(--text-color);
-        padding: 10px 20px;
-        border-radius: 20px;
+        padding: 10px 15px;
+        border-radius: 15px;
         box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
                     rgba(0, 0, 0, 0.23) 0px 3px 6px;
     }
@@ -1344,8 +1344,27 @@ footer .footer-sections .office-info .contact-info li svg {
 
 footer .footer-sections .office-info .contact-info li h6,
 footer .footer-sections .office-info .contact-info li a {
+    font-family: 'gec-semiBold-font';
     font-size: 15px;
-    margin-left: 20px;
+    margin-left: 10px;
+    line-height: 1.5;
+}
+
+footer .footer-sections .office-info .contact-info li:nth-child(2) h6 {
+    display: flex;
+    align-items: center;
+}
+
+footer .footer-sections .office-info .contact-info li:nth-child(2) h6 div {
+    display: flex;
+    background-color: var(--main-color);
+    padding: 10px;
+    margin-left: 5px;
+    border-radius: 50px;
+}
+
+footer .footer-sections .office-info .contact-info li:nth-child(2) h6 div img {
+    width: 20px;
 }
 
 footer .footer-sections .office-info .contact-info li a {
@@ -1408,6 +1427,7 @@ footer .footer-sections .get-in-touch .social-media-icons h6 {
     font-family: 'gec-semiBold-font';
     font-size: 20px;
     margin: 20px 0px;
+    line-height: 1.5;
 }
 
 footer .footer-sections .get-in-touch .social-media-icons a {

@@ -7,6 +7,71 @@
     margin: 50px auto;
 }
 
+.work-environment-section {
+    padding: 10px 60px;
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.work-environment-section h2 {
+    width: fit-content;
+    padding-right: 10px;
+    font-size: 40px;
+    font-family: 'gec-semiBold-font';
+    border-bottom: 4px solid var(--main-color);
+}
+
+.work-environment-section span {
+    font-family: 'gec-medium-font';
+    color: var(--third-main-color);
+}
+
+.work-environment-section .work-environment {
+    line-height: 1.5;
+    font-size: 20px;
+    margin: 30px 10px;
+}
+
+.work-environment-section .work-features {
+    display: grid;
+    grid-template-columns: repeat(2, 500px);
+    justify-content: center;
+}
+
+.work-environment-section .work-features li {
+    background-color: white;
+    line-height: 1.5;
+    padding: 40px 50px;
+    margin: 10px;
+    font-size: 18px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.work-environment-section .work-features li:nth-child(2) {
+    order: -2;
+}
+
+
+.work-environment-section .work-features li:first-child,
+.work-environment-section .work-features li:nth-child(3) {
+    color: var(--text-color);
+    background-color: var(--main-color);
+}
+
+.work-environment-section .work-features li strong {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-family: "gec-medium-font";
+}
+
+.work-environment-section .cta-text {
+    font-size: 25px;
+    margin-top: 50px;
+    text-align: center;
+}
+
 .join-us-section {
     display: flex;
     justify-content: space-evenly;
@@ -14,27 +79,33 @@
 
 .join-us-section .user-form {
     display: grid;
-    width: calc(100% - 200px);
+    width: 60%;
     padding: 0px 50px;
     margin: 50px 0px;
 }
 
 .join-us-section .user-form label {
+    display: block;
     font-family: 'gec-semiBold-font';
     margin-top: 30px;
     margin-bottom: 10px;
     padding-bottom: 3px;
     width: fit-content;
     border-bottom: 2px solid var(--main-color);
-}
-
-.join-us-section .user-form input {
-    padding: 8px 5px;
-    outline-color: var(--main-color);
     font-size: 20px;
 }
 
+.join-us-section .user-form input {
+    width: 100%;
+    padding: 8px 5px;
+    outline-color: var(--main-color);
+    font-size: 20px;
+    border: 1px solid var(--main-color);
+    border-radius: 5px;
+}
+
 .join-us-section .user-form textarea {
+    width: 100%;
     height: 150px;
     outline-color: var(--main-color);
     resize: none;
@@ -73,8 +144,27 @@
 }
 
 @media (max-width: 1000px) {
+    .work-environment-section {
+        padding: 10px 30px;
+    }
+
+    .work-environment-section .work-features{
+        grid-template-columns: repeat(2, 400px);
+    }
+ 
     .join-us-section .user-form {
         padding: 0px;
+    }
+}
+
+@media (max-width: 800px) {
+    .work-environment-section .work-features {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .work-environment-section .work-features li:nth-child(2) {
+        order: 0;
     }
 }
 
@@ -89,9 +179,21 @@
         font-size: 20px;
         margin: 50px auto;
     }
+
+    .work-environment-section {
+        padding: 0px;
+    }
+
+    .work-environment-section h2 {
+        margin: 0px auto;
+    }
 }
 
 @media (max-width: 500px) {
+    .work-environment-section {
+        text-align: center;
+    }
+
     .join-us-section .user-form {
         padding: 0px 10px;
     }

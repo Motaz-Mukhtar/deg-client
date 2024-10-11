@@ -192,26 +192,55 @@
     </div>
 
     <!-- Careers -->
-    <section class="join-us-section">
+    <section class="work-environment-section">
+        <h2 class="up">Why Us ?</h2>
+        <p class="work-environment up">
+            At <span>GEC</span>, we foster a dynamic and collaborative work environment where your contributions are valued. 
+            We believe in innovation, teamwork, and continuous growth, providing you with the tools and opportunities 
+            to advance your career.    
+        </p>
+        <ul class="work-features up">
+            <li><strong>Innovative Projects:</strong> Be part of groundbreaking engineering projects that make an impact.</li>
+            <li><strong>Team Collaboration:</strong> Work alongside a team of experts who are passionate about what they do.</li>
+            <!-- <li><strong>Professional Growth:</strong> Access training programs and resources that support your professional journey.</li> -->
+            <li><strong>Work-Life Balance:</strong> We value your personal time and provide flexible schedules to promote balance.</li>
+            <li><strong>Inclusive Culture:</strong> Our team thrives on diversity and inclusivity, creating a welcoming environment for everyone.</li>
+        </ul>
+        <p class="cta-text up">
+            Ready to make a difference? Join us at <span>GEC</span> and be part of a future where your skills and ideas shape the world!
+        </p>
+    </section>
+    <section class="join-us-section up">
         <div class="user-form">
-            
-            <label for="first-name">First Name:</label>
-            <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
-            
-            <label for="last-name">Last Name:</label>
-            <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
-            
-            <label for="mobile-number">Mobile Number:</label>
-            <input type="text" id="mobile-number" name="mobile-number" placeholder="Mobile Number" required>
+            <div class="form-group">
+                <label for="first-name"><i class="fas fa-user"></i>  First Name:</label>
+                <input type="text" id="first-name" name="first-name" placeholder="First Name" required aria-label="First Name">
+            </div>
 
-            <label for="user-email">Your Email:</label>
-            <input type="email" id="user-email" name="email" placeholder="Email" required>
+            <div class="form-group">
+                <label for="last-name"><i class="fas fa-user"></i>  Last Name:</label>
+                <input type="text" id="last-name" name="last-name" placeholder="Last Name" required aria-label="Last Name">
+            </div>
+            
+            <div class="form-group">
+                <label for="user-email"><i class="fas fa-envelope"></i>  Your Email:</label>
+                <input type="email" id="user-email" name="email" placeholder="Email" required aria-label="Email">
+            </div>
 
-            <label for="user-message">Your Message:</label>
-            <textarea id="user-message" name="user-message" placeholder="Message" required ></textarea>
+            <div class="form-group">
+                <label for="mobile-number"><i class="fas fa-phone"></i>  Mobile Number:</label>
+                <input type="text" id="mobile-number" name="mobile-number" placeholder="Mobile Number" required aria-label="Mobile Number">
+            </div>
 
-            <label for="attachment">Your CV / Resume</label>
-            <input type="file" id="attachment" name="attachment" required>
+            <div class="form-group">
+                <label for="user-message"><i class="fas fa-comment"></i>  Your Message:</label>
+                <textarea id="user-message" name="user-message" placeholder="Message" required aria-label="Message"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="attachment"><i class="fas fa-file-alt"></i>  Your CV / Resume</label>
+                <input type="file" id="attachment" name="attachment" required aria-label="Resume / CV">
+            </div>
 
             <input type="submit" value="send" onclick="sendEmail()">
         </div>
@@ -229,19 +258,15 @@
                 <ul class="contact-info">
                     <li>
                         <i class="fas fa-envelope"></i>
-                        <a href="mailto:info@gec.com?subject=Contact" class="link">info@gec.sa</a> 
+                        <a href="mailto:info@gec.com?subject=Contact" class="link">info@guwaihes.net</a> 
                     </li>
                     <li>
                         <i class="fas fa-phone"></i>
-                        <h6>+966 11 20 333 43</h6>
+                        <h6>+966 11 20 333 43, <div><img src="/assets/fax-icon.svg" alt="Fax-icon"></div> +966 11 20 333 53</h6>
                     </li>
-                    <li>
+                    <li style="line-height: 1.5;">
                         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"/></svg>
-                        <h6>7355 Riyadh 12629, Malaz District</h6>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-info" style="padding: 10px 16px;"></i>
-                        <h6>FAX : 0112033353, Post Office : 27197</h6>
+                        <h6>7355 Riyadh 12629, Malaz District <br /> P.O.BOX 27197</h6>
                     </li>
                 </ul>
             </section>
