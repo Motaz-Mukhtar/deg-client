@@ -211,39 +211,59 @@
         </p>
     </section>
     <section class="join-us-section up">
-        <div class="user-form">
+        <form class="user-form" enctype="multipart/form-data">
             <div class="form-group">
-                <label for="first-name"><i class="fas fa-user"></i>  First Name:</label>
+                <label for="first-name"><i class="fas fa-user"></i>  First Name: <span>*</span></label>
                 <input type="text" id="first-name" name="first-name" placeholder="First Name" required aria-label="First Name">
             </div>
-
             <div class="form-group">
-                <label for="last-name"><i class="fas fa-user"></i>  Last Name:</label>
+                <label for="last-name"><i class="fas fa-user"></i>  Last Name: <span>*</span></label>
                 <input type="text" id="last-name" name="last-name" placeholder="Last Name" required aria-label="Last Name">
             </div>
             
             <div class="form-group">
-                <label for="user-email"><i class="fas fa-envelope"></i>  Your Email:</label>
+                <label for="user-email"><i class="fas fa-envelope"></i>  Your Email: <span>*</span></label>
                 <input type="email" id="user-email" name="email" placeholder="Email" required aria-label="Email">
             </div>
 
             <div class="form-group">
-                <label for="mobile-number"><i class="fas fa-phone"></i>  Mobile Number:</label>
-                <input type="text" id="mobile-number" name="mobile-number" placeholder="Mobile Number" required aria-label="Mobile Number">
+                <label for="phone-number"><i class="fas fa-phone"></i>  Mobile Number:  <span>*</span></label>
+                <input type="text" id="phone-number" name="phone-number" placeholder="Mobile Number" required aria-label="Mobile Number">
             </div>
 
             <div class="form-group">
-                <label for="user-message"><i class="fas fa-comment"></i>  Your Message:</label>
-                <textarea id="user-message" name="user-message" placeholder="Message" required aria-label="Message"></textarea>
+                <label for="job-title"><i class="fa-solid fa-suitcase"></i>  Job Title:</label>
+                <select name="job-title" id="job-title">
+                    <option selected></option>
+                    <option value="Architectural Designer">Architectural Designer</option>
+                    <option value="Civil Engineer">Civil Engineer</option>
+                    <option value="Electrical Engineer">Electrical Engineer</option>
+                    <option value="Mechanical Engineer">Mechanical Engineer</option>
+                    <option value="Structural Engineer">Structural Engineer</option>
+                    <option value="Project Manager">Project Manager</option>
+                    <option value="Human Resources Specialist">Human Resources Specialist</option>
+                    <option value="Urban Planner">Urban Planner</option>
+                </select>
             </div>
 
             <div class="form-group">
-                <label for="attachment"><i class="fas fa-file-alt"></i>  Your CV / Resume</label>
-                <input type="file" id="attachment" name="attachment" required aria-label="Resume / CV">
+                <label for="user-message"><i class="fas fa-message"></i>  Your Message:</label>
+                <textarea id="user-message" name="user-message" placeholder="Message" aria-label="Message"></textarea>
             </div>
 
-            <input type="submit" value="send" onclick="sendEmail()">
-        </div>
+            <div class="form-group">
+                <label for="attachment"><i class="fas fa-file-alt"></i>  Your CV / Resume: <span>*</span></label>
+                <input type="file" accept=".pdf,.docx" id="attachment" name="attachment" required aria-label="Resume / CV">
+            </div>
+            <p class="error-message">
+            </p>
+            <p class="success-message"></p>
+            <!-- <input type="submit" value="send" onclick="sendEmail()"> -->
+             <button type="submit" class="submit-btn">
+                <span class="btn-text">Send</span>
+                <span class="btn-loader"></span>
+             </button>
+        </form>
     </section>
     <footer id="ContactUs">
          <div class="footer-sections">
@@ -308,6 +328,5 @@
     <script src="../js/loaderScript.js"></script>
     <script src="../js/langSwitch.js"></script>
     <script src="../js/emailSendingScript.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
 </html>

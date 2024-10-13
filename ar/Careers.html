@@ -231,32 +231,63 @@
             <li><strong>ثقافة شاملة:</strong> فريقنا يزدهر بفضل التنوع والشمولية، مما يخلق بيئة ترحيبية للجميع.</li>
         </ul>
         <p class="cta-text up">
-            هل أنت مستعد لإحداث فرق؟ انضم إلينا في <span>GEC</span> وكن جزءًا من مستقبل حيث تشكل مهاراتك وأفكارك العالم!
+            هل أنت مستعد لإحداث فرق؟ انضم إلينا في <span>GEC</span> وكن جزءًا من مستقبل تُشكّل فيه مهاراتك وأفكارك العالم!
         </p>
     </section>
     <section class="join-us-section up">
-        <div class="user-form">
+        <form class="user-form" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="first-name"><i class="fas fa-user"></i>  الاسم الأول: <span>*</span></label>
+                <input type="text" id="first-name" name="first-name" placeholder="الاسم الأول" required aria-label="First Name">
+            </div>
+            <div class="form-group">
+                <label for="last-name"><i class="fas fa-user"></i>  اسم العائلة: <span>*</span></label>
+                <input type="text" id="last-name" name="last-name" placeholder="اسم العائلة" required aria-label="Last Name">
+            </div>
             
-            <label for="first-name">الاسم الأول:</label>
-            <input type="text" id="first-name" name="first-name" placeholder="الاسم الأول" required aria-label="الاسم الأول">
-            
-            <label for="last-name">اسم العائلة:</label>
-            <input type="text" id="last-name" name="last-name" placeholder="اسم العائلة" required aria-label="اسم العائلة">
-            
-            <label for="mobile-number">رقم الهاتف:</label>
-            <input type="text" id="mobile-number" name="mobile-number" placeholder="رقم الهاتف" required aria-label="رقم الهاتف">
+            <div class="form-group">
+                <label for="user-email"><i class="fas fa-envelope"></i>  البريد الاكتروني: <span>*</span></label>
+                <input type="email" id="user-email" name="email" placeholder="البريد الاكتروني" required aria-label="Email">
+            </div>
 
-            <label for="user-email">البريد الاكتروني:</label>
-            <input type="email" id="user-email" name="email" placeholder="البريد الاكتروني" required aria-label="البريد الاكتروني">
+            <div class="form-group">
+                <label for="phone-number"><i class="fas fa-phone"></i>  رقم الهاتف:  <span>*</span></label>
+                <input type="text" id="phone-number" name="phone-number" placeholder="رقم الهاتف" required aria-label="Mobile Number">
+            </div>
 
-            <label for="user-message">رسالتك:</label>
-            <textarea id="user-message" name="user-message" placeholder="رسالتك" required aria-label="رسالتك"></textarea>
+            <div class="form-group">
+                <label for="job-title"><i class="fa-solid fa-suitcase"></i>  المسمى الوظيفي:</label>
+                <select name="job-title" id="job-title">
+                    <option selected></option>
+                    <option value="Architectural Engineer">مهندس معماري</option>
+                    <option value="Civil Engineer">مهندس مدني</option>
+                    <option value="Electrical Engineer">مهندس كهربائي</option>
+                    <option value="Mechanical Engineer">مهندس ميكانيكي</option>
+                    <option value="Structural Engineer">مهندس إنشائي</option>
+                    <option value="Project Manager">مدير مشاريع</option>
+                    <option value="Human Resources Specialist">أخصائي موارد بشرية</option>
+                    <option value="Urban Planner">مخطط حضري</option>
+                </select>
+            </div>
 
-            <label for="attachment">السيرة الذاتية:</label>
-            <input type="file" id="attachment" name="attachment" required aria-label="السيرة الذاتية">
+            <div class="form-group">
+                <label for="user-message"><i class="fas fa-message"></i>  رسالتك:</label>
+                <textarea id="user-message" name="user-message" placeholder="رسالتك" aria-label="Message"></textarea>
+            </div>
 
-            <input type="submit" value="إرسال">
-        </div>
+            <div class="form-group">
+                <label for="attachment"><i class="fas fa-file-alt"></i>  السيرة الذاتية: <span>*</span></label>
+                <input type="file" accept=".pdf,.docx" id="attachment" name="attachment" required aria-label="Resume / CV">
+            </div>
+            <p class="error-message">
+            </p>
+            <p class="success-message"></p>
+            <!-- <input type="submit" value="send" onclick="sendEmail()"> -->
+             <button type="submit" class="submit-btn">
+                <span class="btn-text">إرسال</span>
+                <span class="btn-loader"></span>
+             </button>
+        </form>
     </section>
     <footer id="ContactUs">
         <div class="footer-sections">
@@ -320,5 +351,6 @@
     <script src="../js/appearansEffect.js"></script>
     <script src="../js/loaderScript.js"></script>
     <script src="../js/langSwitch.js"></script>
+    <script src="../js/emailSendingScript.js"></script>
 </body>
 </html>

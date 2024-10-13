@@ -1,34 +1,95 @@
-// Host: 'smtp.elasticemail.com',
-// Username: 'test@gec.sa',
-// Password: 'E3A6F4066F956E38CF614CCADFF75806E6DA',
-// SecureToken: '6139d10a-ef84-468a-a4a5-ac898b229c75',
+// async function sendEmail() {
+document.querySelector('form').addEventListener('submit', async (e) => {
 
-// cljiqinqyhcujw4i49p15ody
+    e.preventDefault();
 
+    const form = e.target;
+    const submitButton = document.querySelector('.submit-btn');
+    const errorMessage = document.querySelector('.error-message');
+    const successMessage = document.querySelector('.success-message');
 
-// b3bcd08aab9ab63487a80d38a93338a6 API Key
+    
+    if (!form.checkValidity()) {
+        // If form is invalid, trigger the native validation
+        form.reportValidity();
+        
+        // Display a custom error message or highlight invalid fields
+        submitButton.classList.remove('loading');
+        submitButton.disabled = false;    
+        errorMessage.textContent = 'Please fill in the required fields correctly.';
+        return;
+    }
 
-// f8298c5f0b4bd03c2c5d8cd0f4892003 Secret Key
+    submitButton.classList.add('loading');
+    submitButton.disabled = true;
 
-function sendEmail() {
-    console.log('hello world')
-    Email.send({
-        // Host: 'smtp.elasticemail.com',
-        // Username: 'test@gec.sa',
-        // Password: 'E3A6F4066F956E38CF614CCADFF75806E6DA',
-        Host: 'smtp.gmail.com',
-        Username: 'motazmukhtar0@gmail.com',
-        Password: 'motazmukhtar18564',
-        To: 'motazmukhtar0@gmail.com',
-        From: 'motazmukhtar0@gmail.com',
-        Subject: "Test Email from Hostinger SMTP",
-        Body: "This is a test email sent using Hostinger's SMTP server with SMTPJS."
+    const firstName = document.querySelector('#first-name').value.trim();
+    const lastName = document.querySelector('#last-name').value.trim();
+    const email = document.querySelector('#user-email').value.trim();
+    const phoneNumber = document.querySelector('#phone-number').value.trim();
+    const jobTitle = document.querySelector('#job-title').value;
+    const message = document.querySelector('#user-message').value;
+    const attachment = document.querySelector('#attachment').files[0];
+
+    errorMessage.textContent = '';
+
+    const formData = new FormData();
+
+    formData.append('firstName', firstName);
+    formData.append('lastName', lastName);
+    formData.append('email', email);
+    formData.append('phoneNumber', phoneNumber);
+    formData.append('jobTitle', jobTitle);
+    formData.append('message', message);
+    formData.append('attachment', attachment);
+
+    if(!(attachment.type in {"application/vnd.openxmlformats-officedocument.wordprocessingml.document": undefined, "application/pdf": undefined})) {
+        let currentURL = window.location.href.split('/');
+
+        
+        if (currentURL[3] === 'ar') {
+            errorMessage.textContent = 'يجب أن تكون السيرة الذاتية في صيغة pdf أو docx فقط';
+        }
+        else {
+            errorMessage.textContent = 'Resume/CV must be only PDF or word file';
+        }
+
+        submitButton.classList.remove('loading');
+        submitButton.disabled = false;
+        return;
+    }
+
+    submitButton.classList.remove('loading')
+    submitButton.disabled = false;
+
+    await fetch('http://api.gec.sa:5000/api/v1/mail', {
+        method: 'POST',
+        body: formData,
     })
-    .then(function (message) {
-        console.log(message)
-        alert("Email sent successfully!");
+    .then(response => {
+        if (response.status === 200) {
+            const currentURL = window.location.href.split('/');
+
+            if (currentURL[3] === 'ar') {
+                successMessage.textContent = 'تم الارسال بنجاح, نقوم الأن بمراجعة طلبك'
+            } else {
+                successMessage.textContent = "Email sent successfully, we are now reviewing your request";
+            }
+
+            setTimeout(() => {
+                window.location.reload();
+            }, 5000)
+
+        }
     })
-    .catch(function (error) {
-        alert("Failed to send email. Error: " + error);
+    .catch(error => {
+        console.log(error)
+        submitButton.classList.remove('loading');
+        submitButton.disabled = false;
     });
-}
+
+    submitButton.classList.remove('loading');
+    submitButton.disabled = false;    
+});
+
+// }
