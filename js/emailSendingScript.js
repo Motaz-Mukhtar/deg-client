@@ -62,7 +62,7 @@ document.querySelector('form').addEventListener('submit', async (e) => {
     submitButton.classList.remove('loading')
     submitButton.disabled = false;
 
-    await fetch('http://api.gec.sa:5000/api/v1/mail', {
+    await fetch('https://api.gec.sa/api/v1/mail', {
         method: 'POST',
         body: formData,
     })
