@@ -1502,6 +1502,12 @@ footer .footer-sections .get-in-touch .social-media-icons a.whatsapp:hover {
     }
 }
 
+@media (max-width: 550px) {
+    footer {
+        padding: 70px 10px;
+    }
+}
+
 @media (max-width: 400px) {
     footer .footer-sections .office-info .contact-info li  {
         flex-wrap: nowrap;

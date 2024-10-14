@@ -91,11 +91,16 @@ aside::first-letter {
 @media (max-width: 700px) {
     .who-we-are-section {
         padding: 0px;
-        margin: 0px;
+        margin: 0px 10px;
+        margin-top: 50px;
     }
 }
 
 @media (max-width: 500px) {
+    .who-we-are-section p {
+        margin: 0px 20px;
+    }
+
     .who-we-are-section .s1 aside h1 {
         font-size: 30px;
     }
@@ -136,7 +141,7 @@ aside::first-letter {
 
 .brief-section p {
     line-height: 1.5;
-    font-size: 17px;
+    font-size: 20px;
     margin-left: 50px;
 }
 
@@ -198,6 +203,10 @@ aside.c2 .s5 {
 }
 
 @media (max-width: 500px) {
+    .who-we-are-section aside h1 {
+        margin: 0px auto;
+    }
+
     .brief-section .s3 img {
         width: 300px;
     }
@@ -209,6 +218,14 @@ aside.c2 .s5 {
     aside.c2 {
         margin: 0px 30px;
         margin-bottom: 50px;
+    }
+
+    .strategic-section .article-container .title-container i {
+        margin-right: 30px;
+    }
+
+    .strategic-section .article-container .title-container h1 {
+        font-size: 40px;
     }
 }
 /* End Brief Section */
