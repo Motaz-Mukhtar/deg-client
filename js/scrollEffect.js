@@ -14,6 +14,7 @@ function newsSectionScrolling() {
     let isDown = false;
     let startX;
     let scrollLeft;
+    let isHorizontalScroll = false;
 
     newsContainer.addEventListener('mousedown', (e) => {
         isDown = true;
@@ -53,25 +54,36 @@ function newsSectionScrolling() {
     
 
 
-    // Touch events
+    // Handling touch events for mobile
     newsContainer.addEventListener('touchstart', (e) => {
-        isDown = true;
-        newsContainer.classList.add('active');
         startX = e.touches[0].pageX - newsContainer.offsetLeft;
+        startY = e.touches[0].pageY - newsContainer.offsetTop;
         scrollLeft = newsContainer.scrollLeft;
-    });
-
-    newsContainer.addEventListener('touchend', () => {
-        isDown = false;
-        newsContainer.classList.remove('active');
+        isDown = true;
     });
 
     newsContainer.addEventListener('touchmove', (e) => {
         if (!isDown) return;
-        e.preventDefault();
+
         const x = e.touches[0].pageX - newsContainer.offsetLeft;
-        const walk = (x - startX) * 4; // Adjust scroll speed as needed
-        newsContainer.scrollLeft = scrollLeft - walk;
+        const y = e.touches[0].pageY - newsContainer.offsetTop;
+        const xDiff = Math.abs(x - startX);
+        const yDiff = Math.abs(y - startY);
+
+        // Only activate horizontal scroll if the user swipes more horizontally than vertically
+        if (xDiff > yDiff) {
+            isHorizontalScroll = true;
+            e.preventDefault();
+            const walk = (x - startX) * 3; // Adjust scroll speed if needed
+            newsContainer.scrollLeft = scrollLeft - walk;
+        } else {
+            isHorizontalScroll = false;
+        }
+    });
+
+    newsContainer.addEventListener('touchend', () => {
+        isDown = false;
+        isHorizontalScroll = false;
     });
 }
 

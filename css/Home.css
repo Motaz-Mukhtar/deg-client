@@ -1337,6 +1337,12 @@ header nav ul li.projects-menu .sub-menu .projects-sub-menu::-webkit-scrollbar-t
         margin: 0px 10px;
     }
 }
+
+@media (max-width: 430px) {
+    .news-section .news-container .news-image-item .image-container .slides {
+        width: 300px;
+    }
+}
 /* End News Section */
 
 /* Start Partners Section */
