@@ -1256,6 +1256,7 @@ header nav ul li.projects-menu .sub-menu .projects-sub-menu::-webkit-scrollbar-t
 
 .news-section .news-container {
     display: flex;
+    /* justify-content: center; */
     gap: 30px;
     overflow: hidden;
     margin: 0px 40px;

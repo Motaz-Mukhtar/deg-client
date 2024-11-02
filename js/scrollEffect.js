@@ -1,24 +1,6 @@
 // document.querySelector('.landing-scroll').addEventListener('click', () => window.scrollBy(0, 600));
 
 function newsSectionScrolling() {
-    // const newsContainer = document.querySelector('.news-container');
-    // document.querySelectorAll('.news-image-item').forEach((item, index) => {
-    //     item.addEventListener('click', () => {
-    //         // Calculate the offset needed to center the clicked item
-    //         const itemPosition = item.offsetLeft; // Position of clicked item from the left
-    //         const itemWidth = item.offsetWidth; // Width of the clicked item
-    //         const wrapperWidth = newsContainer.clientWidth; // Width of the wrapper (visible area)
-    
-    //         // Scroll position needed to center the clicked item
-    //         const scrollTo = itemPosition - (wrapperWidth / 2) + (itemWidth / 2);
-    
-    //         // Smoothly scroll to the calculated position
-    //         newsContainer.scrollTo({
-    //            left: scrollTo,
-    //            behavior: 'smooth'
-    //         });
-    //     })
-    // });
 
     const newsContainer = document.querySelector('.news-container');
     if (newsContainer.children.length <= 3) {
@@ -41,25 +23,54 @@ function newsSectionScrolling() {
         scrollLeft = newsContainer.scrollLeft;
     });
 
+
+
     newsContainer.addEventListener('mouseenter', () => {
         newsContainer.style.cursor = 'grab';
+        console.log('enter')
     })
     
     newsContainer.addEventListener('mouseleave', () => {
         isDown = false;
         newsContainer.style.cursor = 'default';
+        console.log('leave')
     });
     
     newsContainer.addEventListener('mouseup', () => {
         isDown = false;
         newsContainer.classList.remove('active');
+        console.log('up')
     });
 
     newsContainer.addEventListener('mousemove', (e) => {
         if (!isDown) return;
+        console.log('move')
         e.preventDefault();
         const x = e.pageX - newsContainer.offsetLeft;
-        const walk = (x - startX) * 3; // Multiplied by 3 to increase scroll speed
+        const walk = (x - startX) * 2; // Multiplied by 3 to increase scroll speed
+        newsContainer.scrollLeft = scrollLeft - walk;
+    });
+    
+
+
+    // Touch events
+    newsContainer.addEventListener('touchstart', (e) => {
+        isDown = true;
+        newsContainer.classList.add('active');
+        startX = e.touches[0].pageX - newsContainer.offsetLeft;
+        scrollLeft = newsContainer.scrollLeft;
+    });
+
+    newsContainer.addEventListener('touchend', () => {
+        isDown = false;
+        newsContainer.classList.remove('active');
+    });
+
+    newsContainer.addEventListener('touchmove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.touches[0].pageX - newsContainer.offsetLeft;
+        const walk = (x - startX) * 2; // Adjust scroll speed as needed
         newsContainer.scrollLeft = scrollLeft - walk;
     });
 }
