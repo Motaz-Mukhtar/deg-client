@@ -70,7 +70,7 @@ function newsSectionScrolling() {
         if (!isDown) return;
         e.preventDefault();
         const x = e.touches[0].pageX - newsContainer.offsetLeft;
-        const walk = (x - startX) * 2; // Adjust scroll speed as needed
+        const walk = (x - startX) * 4; // Adjust scroll speed as needed
         newsContainer.scrollLeft = scrollLeft - walk;
     });
 }
