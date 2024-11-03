@@ -38,6 +38,11 @@
         right: 0;
     }
 
+    .news-section .news-container .news-image-item .news-date,
+    .news-section .news-container .news-image-item .news-title {
+        direction: rtl;
+    }
+
     footer h4 {
         direction: rtl;
     }
@@ -72,9 +77,12 @@
                     </div>
                 </div>
                 <ul class="nav-bar">
-                    <li class="menu-close">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="white"><path d="m332-285.33 148-148 148 148L674.67-332l-148-148 148-148L628-674.67l-148 148-148-148L285.33-628l148 148-148 148L332-285.33ZM480-80q-82.33 0-155.33-31.5-73-31.5-127.34-85.83Q143-251.67 111.5-324.67T80-480q0-83 31.5-156t85.83-127q54.34-54 127.34-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 82.33-31.5 155.33-31.5 73-85.5 127.34Q709-143 636-111.5T480-80Zm0-66.67q139.33 0 236.33-97.33t97-236q0-139.33-97-236.33t-236.33-97q-138.67 0-236 97-97.33 97-97.33 236.33 0 138.67 97.33 236 97.33 97.33 236 97.33ZM480-480Z"/></svg>                    </li>
-                    <li><a href="./" class="select">الصفحة الرئيسية</a></li>
+                    <li class="menu-close" onclick="closeMenu(this)">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="white"><path d="m332-285.33 148-148 148 148L674.67-332l-148-148 148-148L628-674.67l-148 148-148-148L285.33-628l148 148-148 148L332-285.33ZM480-80q-82.33 0-155.33-31.5-73-31.5-127.34-85.83Q143-251.67 111.5-324.67T80-480q0-83 31.5-156t85.83-127q54.34-54 127.34-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 82.33-31.5 155.33-31.5 73-85.5 127.34Q709-143 636-111.5T480-80Zm0-66.67q139.33 0 236.33-97.33t97-236q0-139.33-97-236.33t-236.33-97q-138.67 0-236 97-97.33 97-97.33 236.33 0 138.67 97.33 236 97.33 97.33 236 97.33ZM480-480Z"/></svg>
+                    </li>
+                    <li>
+                        <a href="./" class="select">الصفحة الرئيسية</a>
+                    </li>
                     <li class="services-menu menu">
                         <a href="./Services.html">خدماتنا</a>
                         <ul class="sub-menu">
@@ -225,14 +233,10 @@
         </header>
         <div class="landing-container">
             <div class="landing-text">
-                <!-- <h1 class="up">Engineering Consultancy</h1> -->
                 <p class="up">
                     تفخر شركتنا بتقديم مجموعة متنوعة من الخدمات الهندسية المتميزة<span>.</span>
                 </p>
             </div>
-            <!-- <div class="landing-scroll">
-                <i class="fa fa-chevron-down"></i>
-            </div> -->
         </div>
     </div>
 
@@ -250,7 +254,7 @@
 
     <section class="clients-section">
         <h1 class="up">عملائنا</h1>
-        <div class="slider">
+        <div class="slider up">
             <div class="slider-track">
                 <img src="../assets/customers/ABB_logo.svg" alt="ABB_logo">
                 <img src="../assets/customers/Health_Endowment_Fund_logo.jpg" alt="Health_Endowment_Fund_logo">
@@ -275,17 +279,30 @@
             </div>
         </div>
     </section>
+
     <section class="news-section">
         <h1 class="up">آخر أخبارنا</h1>
-        <div class="news-container">
+        <div class="news-container up">
             <div class="news-image-item">
-                <img src="https://placehold.co/600x400" alt="600x400">
-            </div>
-            <div class="news-image-item">
-                <img src="https://placehold.co/600x400" alt="600x400">
-            </div>
-            <div class="news-image-item">
-                <img src="https://placehold.co/600x400" alt="600x400">
+                <div class="image-container">
+                    
+                    <div class="slides">
+                        <img src="../assets/news-pictures/Global-Health-Exhibition-1.jpeg" alt="Global-Health-Exhibition.jpeg" class="slide">
+                        <img src="../assets/news-pictures/Global-Health-Exhibition-2.jpeg" alt="Global-Health-Exhibition.jpeg" class="slide">
+                    </div>
+
+                    <!-- Navigation Controls -->
+                    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+                </div>
+                <h3 class="news-date">
+                    أكتوبر 2024
+                </h3>
+                <div class="news-title">
+                    <p>
+                        توقيع مذكرة تفاهم بين وزارة الصحة وشركة القويحص للاستشارات الهندسية في معرض الصحة العالمي لتعزيز التعاون في مجال الاستشارات الهندسية الصحية
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -353,5 +370,6 @@
     <script src="../js/appearansEffect.js"></script>
     <script src="../js/loaderScript.js"></script>
     <script src="../js/langSwitch.js"></script>
+    <script src="../js/projectsSlider.js"></script>
 </body>
 </html>

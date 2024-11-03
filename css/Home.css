@@ -1286,6 +1286,7 @@ header nav ul li.projects-menu .sub-menu .projects-sub-menu::-webkit-scrollbar-t
     font-size: 20px;
     border: none;
     padding: 5px 13px;
+    padding-bottom: 6px;
     background-color: var(--background-color);
     color: var(--text-color);
     border-radius: 100px;
@@ -1327,6 +1328,10 @@ header nav ul li.projects-menu .sub-menu .projects-sub-menu::-webkit-scrollbar-t
     margin-top: 20px;
     margin-left: 20px;
     font-size: 20px;
+}
+
+.news-section .news-container .news-image-item .news-title p {
+    line-height: 1.4;
 }
 
 @media (max-width: 600px) {
