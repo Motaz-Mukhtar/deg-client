@@ -19,8 +19,11 @@ function changeSlide(step) {
 
 // Function to Update the Slide Position
 function updateSlidePosition() {
-    const slideWidth = slides[0].clientWidth;
+    // const slideWidth = slides[currentIndex].clientWidth;
+    const slideWidth = document.querySelector('.slides').clientWidth;
+
     document.querySelector('.slides').style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+    console.log(document.querySelector('.slides'))
 }
 
 // Function to Auto-Advance the Slider
@@ -47,5 +50,68 @@ function zoomImage(element) {
 
 // Function to Close the Modal
 function closeModal() {
-    document.getElementById("zoomModal").style.display = "none";
+    document.getElementById("zoomModal").style.display = 'none';
+    if (document.getElementById("zoomModal").children[1]) {
+        document.getElementById("zoomModal").children[1].remove();
+    }
+}
+
+// function changeIMGSrc (element, from) {
+//     element.src = from.src;
+// }
+
+// function zoomIn(element) {
+//     const modal = document.getElementById("zoomModal");
+    
+
+//     const sliders = element.previousElementSibling.previousElementSibling.previousElementSibling.cloneNode(true);
+
+//     console.log(sliders)
+
+//     sliders.className = 'slides-zoomIn'
+//     sliders.style.translateX = '700px';
+
+//     modal.appendChild(sliders)
+
+//     sliders.style.translate = '0px';
+//     // sliders.children[0].id = 'zoomedImage';
+//     // sliders.children[0].className = 'modal-content';
+
+//     // sliders.children[1].id = 'zoomedImage';
+//     // sliders.children[1].className = 'modal-content';
+
+//     changeIMGSrc(modal.children[1], sliders.children[0]);
+
+
+//     sliders.children[0].className = 'slide-zoomIn';
+//     sliders.children[1].className = 'slide-zoomIn';
+
+//     sliders.children[1].onclick = () => {
+//         changeIMGSrc(modal.children[1], sliders.children[1])
+//     }
+
+//     sliders.children[0].onclick = () => {
+//         changeIMGSrc(modal.children[1], sliders.children[0])
+//     }
+
+//     // sliders.children[1].addEventListener('click', changeIMGSrc(modal.children[1], this));
+//     // sliders.children[1].addEventListener('click', changeIMGSrc(modal.children[1], this));
+
+
+//     modal.style.display = 'block';
+// }
+
+function zoomIn(element) {
+    const modal = document.getElementById("zoomModal");
+    
+
+    const sliders = element.parentElement.cloneNode(true);
+
+    sliders.children[3].style.display = 'none';
+
+    modal.appendChild(sliders);
+
+    modal.style.display = 'flex';
+    modal.style.justifyContent = 'center';
+    modal.style.alignItems = 'center';
 }

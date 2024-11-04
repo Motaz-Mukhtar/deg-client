@@ -1279,7 +1279,14 @@ header nav ul li.projects-menu .sub-menu .projects-sub-menu::-webkit-scrollbar-t
     overflow: hidden;
 }
 
-.news-section .news-container .news-image-item .image-container button {
+.news-section .modal .image-container {
+    position: absolute;
+    height: fit-content;
+    overflow: hidden;
+}
+
+.news-section .news-container .news-image-item .image-container button,
+.news-section .modal .image-container button {
     position: absolute;
     top: 50%;
     margin: 0px 10px;
@@ -1292,20 +1299,71 @@ header nav ul li.projects-menu .sub-menu .projects-sub-menu::-webkit-scrollbar-t
     border-radius: 100px;
 }
 
-.news-section .news-container .news-image-item .image-container button:first-child {
+.news-section .news-container .news-image-item .image-container .zoom-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: var(--second-text-color);
+    padding: 2px 7px;
+    padding-top: 7px;
+    border-radius: 50px;
+}
+
+/* Modal Styling */
+.news-section .modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.news-section .modal .close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.news-section .modal-content {
+    display: block;
+    margin: auto;
+    width: fit-content;
+    height: 80vh;
+}
+
+.news-section .zoom-modal .images-container img {
+    opacity: 0.8;
+}
+
+.news-section .news-container .news-image-item .image-container button:first-child,
+.news-section .modal button:first-child {
     left: 0px;
 }
 
-.news-section .news-container .news-image-item .image-container button:last-child {
+.news-section .news-container .news-image-item .image-container button:nth-child(3),
+.news-section .modal button:nth-child(3) {
     right: 0px;
 }
 
-.news-section .news-container .news-image-item .image-container .slides {
+.news-section .news-container .news-image-item .image-container .slides{
     display: flex;
     max-width: 450px;
 }
 
-.news-section .news-container .news-image-item img {
+.news-section .modal .slides {
+    max-width: 1000px;
+    display: flex;
+}
+
+.news-section .news-container .news-image-item img,
+.news-section .modal img {
     width: 100%;
     /* transform: scale(1.2); */
     pointer-events: none;
@@ -1313,7 +1371,8 @@ header nav ul li.projects-menu .sub-menu .projects-sub-menu::-webkit-scrollbar-t
     opacity: 0.8;
 }
 
-.news-section .news-container .news-image-item .image-container:hover img {
+.news-section .news-container .news-image-item .image-container:hover img,
+.news-section .modal .image-container img {
     opacity: 1;
 }
 

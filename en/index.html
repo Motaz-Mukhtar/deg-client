@@ -241,6 +241,12 @@
         </div>
     </section>
     <section class="news-section">
+        <!-- Modal for Zoomed Image -->
+        <div id="zoomModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <!-- <img class="modal-content" id="zoomedImage" src="../assets/300x200.png"> -->
+        </div>
+
         <h1 class="up">Latest News</h1>
         <div class="news-container up">
             <div class="news-image-item">
@@ -254,6 +260,10 @@
                     <!-- Navigation Controls -->
                     <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
                     <button class="next" onclick="changeSlide(1)">&#10095;</button>
+                    
+                    <!-- Zoom In Icon -->
+                    <div class="zoom-icon" onclick="zoomIn(this)"><img src="../../../assets/zoom-in-icon.svg" alt="zoom-in"></div>
+
                 </div>
                 <h3 class="news-date">
                     Oct 2024
