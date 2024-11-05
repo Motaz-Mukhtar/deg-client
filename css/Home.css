@@ -112,7 +112,7 @@ img {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    z-index: 10;
+    z-index: 99999999;
     width: 100%;
     background-color: black;
 }
