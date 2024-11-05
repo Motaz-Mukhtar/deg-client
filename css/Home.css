@@ -1184,10 +1184,6 @@ header nav ul li.projects-menu .sub-menu .projects-sub-menu::-webkit-scrollbar-t
     background: linear-gradient(to left, transparent, white);
 }
 
-/* .clients-section .slider:hover .slider-track{
-    animation-play-state: paused;
-} */
-
 @keyframes slide {
     from {
         transform: translateX(0px);
@@ -1224,17 +1220,25 @@ header nav ul li.projects-menu .sub-menu .projects-sub-menu::-webkit-scrollbar-t
         padding:  0px;
     }
 
-    @media (max-width: 700px) {
-        .clients-section .slider-track img {
-            width: 150px;
-            margin: 0px 70px;
-        }
+}
 
-        .clients-section .clients-slider::before,
-        .clients-section .clients-slider::after {
-            width: 200px;
-        }
+@media (max-width: 700px) {
+    .clients-section .slider-track img {
+        width: 150px;
+        margin: 0px 70px;
     }
+
+    .clients-section .clients-slider::before,
+    .clients-section .clients-slider::after {
+        width: 100px;
+    }
+}
+
+@media (max-width: 500px) {
+    .clients-section .clients-slider::before,
+    .clients-section .clients-slider::after {
+        width: 50px;
+    }    
 }
 
 /* End clients Section */
