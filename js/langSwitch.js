@@ -1,6 +1,4 @@
-langSwitcher = document.querySelector('.lang-switcher');
-
-function switchLang () {
+function switchLang (langSwitcher) {
     let currentURL = window.location.href.split('/');
 
     // currentURL[3] = langSwitcher.value;
