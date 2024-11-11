@@ -59,7 +59,7 @@ function navBarDropdown() {
     nodeNavBar.style.padding = '20px 10px';
 
     nodeNavBar.querySelector('.logo').style.margin = '0px';
-    nodeNavBar.querySelector('.logo img').src = '/assets/main-logo.png';
+    nodeNavBar.querySelector('.logo img').src = '/assets/main-logo-white.png';
     nodeNavBar.querySelectorAll('.sub-menu')[0].style.bottom = '-180px';
     nodeNavBar.querySelectorAll('.sub-menu')[1].style.bottom = '-180px';
 
