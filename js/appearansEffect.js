@@ -56,7 +56,7 @@ function navBarDropdown() {
     nodeNavBar.style.width = '100%'
     nodeNavBar.style.backgroundColor = 'var(--background-color)'
     nodeNavBar.style.margin = '0px'
-    nodeNavBar.style.padding = '20px 10px';
+    nodeNavBar.style.padding = '10px';
 
     nodeNavBar.querySelector('.logo').style.margin = '0px';
     nodeNavBar.querySelector('.logo img').src = '/assets/main-logo-gray.png';
