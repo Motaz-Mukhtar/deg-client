@@ -1,8 +1,5 @@
 const headerContainer = document.querySelectorAll(".up");
 
-console.log(headerContainer);
-
-
 function containersAppear() {
     let index = 0;
     window.addEventListener('scroll', () => {
@@ -59,7 +56,7 @@ function navBarDropdown() {
     nodeNavBar.style.padding = '10px';
 
     nodeNavBar.querySelector('.logo').style.margin = '0px';
-    nodeNavBar.querySelector('.logo img').src = '/assets/main-logo-gray.png';
+    nodeNavBar.querySelector('.logo img').src = '/assets/main-logo-yellow.png';
     nodeNavBar.querySelectorAll('.sub-menu')[0].style.bottom = '-180px';
     nodeNavBar.querySelectorAll('.sub-menu')[1].style.bottom = '-180px';
 
@@ -70,7 +67,6 @@ function navBarDropdown() {
     nodeNavBar.childNodes[3].childNodes[3].querySelectorAll('li a')[30].style.color = '#8f8f8f';
     nodeNavBar.childNodes[3].childNodes[3].querySelectorAll('li a')[31].style.color = '#8f8f8f';
     nodeNavBar.childNodes[3].childNodes[3].querySelectorAll('li a')[32].style.color = '#8f8f8f';
-    console.log(nodeNavBar.childNodes[3].childNodes[3].querySelectorAll('li a'))
     nodeNavBar.childNodes[3].childNodes[3].lastChild.previousSibling.style.borderLeftColor = '#8f8f8f';
     nodeNavBar.childNodes[3].childNodes[3].lastChild.previousSibling.style.borderRightColor = '#8f8f8f';
 

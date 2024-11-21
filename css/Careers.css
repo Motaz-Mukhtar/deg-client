@@ -84,7 +84,7 @@
     margin: 50px 0px;
 }
 
-.join-us-section .user-form label {
+.join-us-section .user-form label:not(label.cb-label) {
     display: block;
     font-family: 'gec-semiBold-font';
     margin-top: 30px;
@@ -119,8 +119,10 @@
 .join-us-section .user-form textarea {
     width: 100%;
     height: 150px;
+    font-size: 20px;
+    transition: 0s;
     outline-color: var(--main-color);
-    resize: none;
+    resize: vertical;
     padding: 5px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
