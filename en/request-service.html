@@ -55,6 +55,9 @@
                             <li><a href="./Services.html#Supervision">Supervision</a></li>
                         </ul>
                     </li>
+                    <li>
+                        <a href="./request-service.html" class="select">Request Service</a>
+                    </li>
                     <li class="projects-menu menu">
                         <a href="./Projects.html">Our Projects</a>
                         <ul class="sub-menu">
@@ -183,7 +186,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li><a href="./Careers.html" class="select">Careers</a></li>
+                    <li><a href="./Careers.html">Careers</a></li>
                     <li><a href="./AboutUs.html">About Us</a></li>
                     <li><a href="#ContactUs">Contact Us</a></li>
                     <li class="lang-switch">
@@ -224,35 +227,35 @@
                 <label for="services"><i class="fa-solid fa-gears"></i> Services: <span>*</span></label>
                 <div class="checkboxes">
 
-                    <div class="cb-container">
-                        <input type="checkbox" name="studies-and-design" id="studies-and-design" value="studies-and-design">
+                    <!-- <div class="cb-container">
+                        <input type="checkbox" name="studies-and-design" class="checkbox" id="studies-and-design" value="Studies And Design">
                         <label for="studies-and-design" class="cb-label">Studies And Design</label>
-                    </div>
+                    </div> -->
                     <div class="cb-container">
-                        <input type="checkbox" name="supervision" id="supervision" value="supervision">
+                        <input type="checkbox" name="supervision" class="checkbox" id="supervision" value="Supervision">
                         <label for="supervision" class="cb-label">Supervision</label>
                     </div>
                     <div class="cb-container">
-                        <input type="checkbox" name="project-management" id="project-management" value="project-management">
+                        <input type="checkbox" name="project-management" class="checkbox" id="project-management" value="Project Management">
                         <label for="project-management" class="cb-label">Project Management</label>
                     </div>
                     <div class="cb-container">
-                        <input type="checkbox" name="consulting" id="consulting" value="consulting">
+                        <input type="checkbox" name="consulting" class="checkbox" id="consulting" value="Consulting">
                         <label for="consulting" class="cb-label">Consulting</label>
                     </div>
                     <div class="cb-container">
-                        <input type="checkbox" name="construction-review" id="construction-review" value="construction-review">
+                        <input type="checkbox" name="construction-review" class="checkbox" id="construction-review" value="Construction Review">
                         <label for="construction-review" class="cb-label">Construction Review</label>
                     </div>
-
+                    <div class="cb-container">
+                        <input type="checkbox" name="interior-design" class="checkbox" id="interior-design" value="Interior Design">
+                        <label for="interior-design" class="cb-label">Interior Design</label>
+                    </div>
+                    <!-- <div class="cb-container">
+                        <input type="checkbox" name="design-(structural-architectural-electrical-mechanical)" class="checkbox" id="design-(structural-architectural-electrical-mechanical)" value="Design (Structural - Architectural - Electrical - Mechanical)">
+                        <label for="design-(structural-architectural-electrical-mechanical)" class="cb-label">Design (Structural - Architectural - Electrical - Mechanical)</label>
+                    </div> -->
                 </div>
-                <!-- <select name="services[]" id="services" multiple required>
-                    <option value="studies-and-design">studies and design</option>
-                    <option value="supervision">supervision</option>
-                    <option value="project-management">project management</option>
-                    <option value="consulting">Consulting</option>
-                    <option value="construction-review">Construction Review</option>
-                </select> -->
             </div>
 
             <div class="form-group">
@@ -262,16 +265,15 @@
 
             <p class="error-message">
             </p>
-            <p class="success-message"></p>
              <button type="submit" class="submit-btn">
                 <span class="btn-text">Send</span>
                 <span class="btn-loader"></span>
              </button>
         </form>
     </section>
-    <section class="s2 up">
-        <h2>
-            Not sure about our services<span>?</span> Take a look at <a href="./Projects.html">Our Projects</a> to see how we've helped others achieve success<span>.</span>
+    <section class="s2 success-message">
+        <h2 style="display: block;">
+            Your Request has been sent successfully, our engineering team will review your request and contact you as soon as possible.
         </h2>
     </section>
     <footer id="ContactUs">

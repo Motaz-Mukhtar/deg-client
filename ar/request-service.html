@@ -70,7 +70,6 @@
         </div>
     </div>
 
-
     <div class="image-background-container parent-container">
         <header>
             <a href="./" class="logo">
@@ -90,12 +89,15 @@
                         <a href="./">الصفحة الرئيسية</a>
                     </li>
                     <li class="services-menu menu">
-                        <a href="./Services.html" class="select">خدماتنا</a>
+                        <a href="./Services.html">خدماتنا</a>
                         <ul class="sub-menu">
                             <li><a href="./Services.html#Design">الدراسات و التصميم</a></li>
                             <li><a href="./Services.html#PMO">إدارة المشاريع</a></li>
                             <li><a href="./Services.html#Supervision">الإشراف والدعم الفني</a></li>
                         </ul>
+                    </li>
+                    <li class="">
+                        <a href="./request-service.html" class="select">اطلب خدمة</a>
                     </li>
                     <li class="projects-menu menu">
                         <a href="./Projects.html">مشاريعنا</a>
@@ -160,8 +162,6 @@
                                     </a>
                                 </ul>
                             </li>
-
-
 
                             <li class="sub-sub-menu">
                                 <a href="./Projects.html#pmo">إدارة المشاريع</a>
@@ -266,36 +266,36 @@
                 <label for="services"><i class="fa-solid fa-gears"></i> الخدمات: <span>*</span></label>
                 <div class="checkboxes">
 
-                    <div class="cb-container">
-                        <input type="checkbox" name="studies-and-design" id="studies-and-design" value="studies-and-design">
+                    <!-- <div class="cb-container">
+                        <input type="checkbox" name="studies-and-design" class="checkbox" id="studies-and-design" value="Studies And Design">
                         <label for="studies-and-design" class="cb-label">الدراسات و التصميم</label>
+                    </div> -->
+                    <div class="cb-container">
+                        <input type="checkbox" name="supervision" class="checkbox" id="supervision" value="Supervision">
+                        <label for="supervision" class="cb-label">الإشراف</label>
                     </div>
                     <div class="cb-container">
-                        <input type="checkbox" name="supervision" id="supervision" value="supervision">
-                        <label for="supervision" class="cb-label">الاشراف</label>
+                        <input type="checkbox" name="project-management" class="checkbox" id="project-management" value="Project Management">
+                        <label for="project-management" class="cb-label">إدارة المشاريع</label>
                     </div>
                     <div class="cb-container">
-                        <input type="checkbox" name="project-management" id="project-management" value="project-management">
-                        <label for="project-management" class="cb-label">ادارة المشاريع</label>
+                        <input type="checkbox" name="consulting" class="checkbox" id="consulting" value="Consulting">
+                        <label for="consulting" class="cb-label">الإستشارات</label>
                     </div>
                     <div class="cb-container">
-                        <input type="checkbox" name="consulting" id="consulting" value="consulting">
-                        <label for="consulting" class="cb-label">الاستشارات</label>
-                    </div>
-                    <div class="cb-container">
-                        <input type="checkbox" name="construction-review" id="construction-review" value="construction-review">
+                        <input type="checkbox" name="construction-review" class="checkbox" id="construction-review" value="Construction Review">
                         <label for="construction-review" class="cb-label">مراجعة الإنشاءات</label>
                     </div>
-
+                    <div class="cb-container">
+                        <input type="checkbox" name="interior-design" class="checkbox" id="interior-design" value="Interior Design">
+                        <label for="interior-design" class="cb-label">التصميم الداخلي</label>
+                    </div>
+                    <!-- <div class="cb-container">
+                        <input type="checkbox" name="design-(structural-architectural-electrical-mechanical)" class="checkbox" id="design-(structural-architectural-electrical-mechanical)" value="Design (Structural - Architectural - Electrical - Mechanical)">
+                        <label for="design-(structural-architectural-electrical-mechanical)" class="cb-label">التصميم (إنشائي - معماري - كهرباء - ميكانيكا)</label>
+                    </div> -->
                 </div>
 
-                <!-- <select name="services[]" id="services" multiple required>
-                    <option value="studies-and-design">الدراسات و التصميم</option>
-                    <option value="supervision">الاشراف</option>
-                    <option value="project-management">ادارة المشاريع</option>
-                    <option value="consulting">الاستشارات</option>
-                    <option value="construction-review">مراجعة الإنشاءات</option>
-                </select> -->
             </div>
 
             <div class="form-group">
@@ -305,18 +305,17 @@
 
             <p class="error-message">
             </p>
-            <p class="success-message"></p>
              <button type="submit" class="submit-btn">
                 <span class="btn-text">إرسال</span>
                 <span class="btn-loader"></span>
              </button>
         </form>
     </section>
-    <section class="s2 up">
+    <section class="s2 success-message">
         <h2>
-            لست متأكدًا من خدماتنا <span>؟</span> ألقِ نظرة على <a href="./Projects.html">مشاريعنا</a> لترى كيف ساعدنا الآخرين على تحقيق النجاح<span>.</span>
+            تم إرسال طلبك بنجاح، سيقوم فريقنا الهندسي بمراجعة طلبك والتواصل معك في أقرب وقت ممكن.
         </h2>
-        </section>
+    </section>
      
 
     <footer id="ContactUs">

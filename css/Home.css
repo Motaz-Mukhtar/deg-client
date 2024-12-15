@@ -252,8 +252,8 @@ header nav .lang-switch {
 header nav .lang-switch select {
     font-size: 18px;
     border: 0px;
-    color: var(--main-color);
-    outline-color: var(--main-color);
+    color: var(--second-main-color);
+    outline-color: var(--second-main-color);
     user-select: none;
     background-color: transparent;
     font-family: "gec-semiBold-font";
