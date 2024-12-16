@@ -1,3 +1,18 @@
+function setError(msg) {
+    const errorMessage = document.querySelector('.error-message');
+
+    errorMessage.innerText = msg;
+}
+
+// function setSuccess(msg) {
+
+//     document.querySelector('.join-us-section').style.display = 'none';
+//     document.querySelector('.s1').style.display = 'none';
+
+//     document.querySelector('.success-message').style.display = 'block';
+// }
+
+
 // async function sendEmail() {
 document.querySelector('form').addEventListener('submit', async (e) => {
 
@@ -5,6 +20,8 @@ document.querySelector('form').addEventListener('submit', async (e) => {
 
     const form = e.target;
     const submitButton = document.querySelector('.submit-btn');
+    const textButton = document.querySelector('.btn-text');
+    const loaderButton = document.querySelector('.btn-loader');
     const errorMessage = document.querySelector('.error-message');
     const successMessage = document.querySelector('.success-message');
 
@@ -12,16 +29,9 @@ document.querySelector('form').addEventListener('submit', async (e) => {
     if (!form.checkValidity()) {
         // If form is invalid, trigger the native validation
         form.reportValidity();
-        
-        // Display a custom error message or highlight invalid fields
-        submitButton.classList.remove('loading');
-        submitButton.disabled = false;    
-        errorMessage.textContent = 'Please fill in the required fields correctly.';
         return;
     }
 
-    submitButton.classList.add('loading');
-    submitButton.disabled = true;
 
     const firstName = document.querySelector('#first-name').value.trim();
     const lastName = document.querySelector('#last-name').value.trim();
@@ -54,19 +64,23 @@ document.querySelector('form').addEventListener('submit', async (e) => {
             errorMessage.textContent = 'Resume/CV must be only PDF or word file';
         }
 
-        submitButton.classList.remove('loading');
-        submitButton.disabled = false;
         return;
     }
 
-    submitButton.classList.remove('loading')
-    submitButton.disabled = false;
+    textButton.style.visibility = 'hidden';
+    loaderButton.style.display = 'block';
+    submitButton.disabled = true;
+
 
     await fetch('https://api.gec.sa/api/v1/mail', {
         method: 'POST',
         body: formData,
     })
     .then(response => {
+        if (!response.ok) 
+            throw new Error(response.statusText);
+
+        console.log(response)
         if (response.status === 200) {
             const currentURL = window.location.href.split('/');
 
@@ -83,13 +97,16 @@ document.querySelector('form').addEventListener('submit', async (e) => {
         }
     })
     .catch(error => {
-        console.log(error)
-        submitButton.classList.remove('loading');
-        submitButton.disabled = false;
+        console.log(error);
+        const currentURL = window.location.href.split('/');
+
+        if (currentURL[3] === "en")
+            return setError("Request failed to send");
+        else
+            return setError("فشل إرسال الطلب");
     });
 
-    submitButton.classList.remove('loading');
-    submitButton.disabled = false;    
+    textButton.style.visibility = 'visible';
+    loaderButton.style.display = 'none';
+    submitButton.disabled = false;
 });
-
-// }
