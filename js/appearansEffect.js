@@ -46,6 +46,8 @@ function navBarDropdown() {
     const navBar = document.querySelector('header');
 
     const nodeNavBar = navBar.cloneNode(true);
+    let lastScrollY = window.scrollY;
+
     // color: #8f8f8f;
     nodeNavBar.style.position = 'fixed';
     nodeNavBar.style.top = '-200px'
@@ -85,7 +87,27 @@ function navBarDropdown() {
         } else if (window.scrollY <= 200) {
             nodeNavBar.style.top = '-200px'
         }
-    })
+
+        // // Get the current scroll width.
+        // let currentScroll = window.scrollY;
+        
+        // if (innerWidth < 950) {
+        //     nodeNavBar.childNodes[3].childNodes[3].lastChild.previousSibling.childNodes[1].style.color = 'var(--text-color)';
+        // } else {
+        //     nodeNavBar.childNodes[3].childNodes[3].lastChild.previousSibling.childNodes[1].style.color = 'var(--second-maisn-color)';
+        // }
+
+        // if (currentScroll > lastScrollY || currentScroll < 150) {
+        //     // navigation bar disappear when the user scroll down.
+        //     nodeNavBar.style.top = '-200px';
+        // } else {
+        //     // navigation bar appear when the user scroll up.
+        //     nodeNavBar.style.top = '0px'
+        // }
+
+        // // Update the last scroll value.
+        // lastScrollY = currentScroll;
+    });
 
 }
 

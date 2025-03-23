@@ -653,7 +653,8 @@ header nav ul li.projects-menu .sub-menu .projects-sub-menu::-webkit-scrollbar-t
 
 @media (max-width: 1100px) {
     .landing-container {
-        margin-left: 60px;
+        margin-left: 10px;
+        padding-left: 30px;
     }
 
     .landing-container h1 {
@@ -1155,7 +1156,7 @@ header nav ul li.projects-menu .sub-menu .projects-sub-menu::-webkit-scrollbar-t
     margin: 50px 0px;
 }
 
-.clients-section h1 {
+.clients-section h2 {
     font-size: 40px;
     font-family: 'gec-medium-font';
     color: var(--second-text-color);
@@ -1256,7 +1257,7 @@ header nav ul li.projects-menu .sub-menu .projects-sub-menu::-webkit-scrollbar-t
     padding: 50px 0px;
 }
 
-.news-section h1 {
+.news-section h2 {
     font-size: 40px;
     font-family: 'gec-medium-font';
     color: var(--text-color);
@@ -1446,7 +1447,7 @@ header nav ul li.projects-menu .sub-menu .projects-sub-menu::-webkit-scrollbar-t
     padding: 40px 50px;
 }
 
-.partners-section h1 {
+.partners-section h2 {
     font-family: 'gec-medium-font';
     font-size: 40px;
     text-align: center;
